@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var vetRouter = require('./routes/vet');
+var petRouter = require('./routes/pet');
+var commentRouter = require('./routes/comment');
 
 var app = express();
 
@@ -24,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/vet', vetRouter);
+app.use('/api/vet', vetRouter);
 app.use('/vet/:vetId/pet', petRouter);
 app.use('/vet/:vetId/pet/:petID/comments', commentsRouter);
 
