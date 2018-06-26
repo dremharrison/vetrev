@@ -25,7 +25,7 @@ Vet.remove().then(() => {
 
   const pet1 = new Pet({
     name: 'Chewi',
-    logourl: '',
+    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
