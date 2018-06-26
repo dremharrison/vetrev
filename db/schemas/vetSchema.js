@@ -4,10 +4,8 @@ const petSchema = require('./petSchema')
 const vetSchema = new Schema({
   name: String,
   location: String,
-  hoursOfOperation:{
-   open: Number,
-   close: Number
-  },
+  hoursOfOperationOpen: Number,
+  hoursOfOperationClose: Number,
   logourl: String,
   pets:[petSchema]
 })

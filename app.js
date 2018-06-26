@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/vet', vetRouter);
 app.use('/vet/:vetId/pet', petRouter);
-app.use('/vet/:vetId/pet/:petID/comments', commentsRouter);
+app.use('/vet/:vetId/pet/:petID/comments', commentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

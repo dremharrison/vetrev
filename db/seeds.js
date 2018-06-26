@@ -23,18 +23,89 @@ Vet.remove().then(() => {
     user: 'Adam Jimenez',
   })
 
+  const comment2 = new Comment({
+    subject: 'Go Here! 2',
+    date: 09/01/2018,
+    body: 'I agree! This place is great!',
+    user: 'Adam Jimenez',
+  })
+
+  const comment3 = new Comment({
+    subject: 'Go Here! 3',
+    date: 09/01/2018,
+    body: 'I agree! This place is great!',
+    user: 'Adam Jimenez',
+  })
+
+  const comment4 = new Comment({
+    subject: 'Go Here! 4',
+    date: 09/01/2018,
+    body: 'I agree! This place is great!',
+    user: 'Adam Jimenez',
+  })
+
   const pet1 = new Pet({
     name: 'Chewi',
     logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
+    comments:[comment1,comment2]
   })
 
+  const pet2 = new Pet({
+    name: 'Chewi Jr',
+    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    age: 3,
+    breed: 'Siberian Husky',
+    gender: 'M',
+    comments:[comment1,comment2]
+  })
 
+  const pet3 = new Pet({
+    name: 'Chewi 3',
+    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    age: 3,
+    breed: 'Siberian Husky',
+    gender: 'M',
+    comments:[comment3,comment4]
+  })
+
+  const pet4 = new Pet({
+    name: 'Chewi 4',
+    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    age: 3,
+    breed: 'Siberian Husky',
+    gender: 'M',
+    comments:[comment3,comment4]
+  })
 
   const vet1 = new Vet({
     name: "Banfield Pet Hospital",
+    location: "650 Ponce De Leon Ave",
+    hoursOfOperationOpen: 8,
+    hoursOfOperationClose: 10,
+    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+  })
+
+  const vet2 = new Vet({
+    name: "Banfield Pet Hospital 2",
+    location: "650 Ponce De Leon Ave",
+    hoursOfOperationOpen: 8,
+    hoursOfOperationClose: 10,
+    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+  })
+
+  const vet3 = new Vet({
+    name: "Banfield Pet Hospital 3",
+    location: "650 Ponce De Leon Ave",
+    hoursOfOperationOpen: 8,
+    hoursOfOperationClose: 10,
+    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+  })
+
+  const vet4 = new Vet({
+    name: "Banfield Pet Hospital 4",
     location: "650 Ponce De Leon Ave",
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
