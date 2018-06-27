@@ -86,6 +86,7 @@ Vet.remove().then(() => {
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    pets:[pet1,pet2]
   })
 
   const vet2 = new Vet({
@@ -94,6 +95,7 @@ Vet.remove().then(() => {
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    pets:[pet1,pet2]
   })
 
   const vet3 = new Vet({
@@ -102,6 +104,7 @@ Vet.remove().then(() => {
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    pets:[pet3,pet4]
   })
 
   const vet4 = new Vet({
@@ -110,6 +113,7 @@ Vet.remove().then(() => {
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    pets:[pet3,pet4]
   })
 
 
