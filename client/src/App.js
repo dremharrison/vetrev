@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import React, { Component } from 'react'
+import Vet from './components/Vet'
+import Pet from './components/Pet'
+import Comment from './components/Comment'
+
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Vet}/>
+            <Route path="/:id/pet" component={Pet}/>
+            <Route path="/:id/pet/pet:id/comments" component={Pet}/>
+          </Switch>
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App
