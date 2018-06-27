@@ -14,8 +14,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={Vet}/>
-            <Route path="/:id/pet" component={Pet}/>
-            <Route path="/:id/pet/pet:id/comments" component={Pet}/>
+            <Route path="/:vetid/pet" component={Pet}/>
+            <Route path="/:vetid/pet/pet:petid/comment" component={Comment}/>
           </Switch>
         </div>
       </Router>
