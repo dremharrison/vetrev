@@ -27,9 +27,9 @@ class Vet extends Component {
 
                 {this.state.vet.map((vet, index) => {
                         return (
-                            <div key={index}>
-                                <div>{vet.name}</div>
-                                <div>{vet.logourl}</div>
+                            <div className="vetDiv" key={index}>
+                                <h3>{vet.name}</h3>
+                                <div><img className="vetLogo" src={vet.logourl}/></div>
                                 <div>Location: {vet.location}</div>
                                 {/* <div>Member Since: {this.props.memberSince}</div> */}
                                 <div>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</div>

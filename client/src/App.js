@@ -4,6 +4,7 @@ import './App.css';
 import Vet from './Components/Vet'
 import Pet from './Components/Pet'
 import axios from 'axios'
+import NewVetForm from './Components/NewVetForm';
 // import Comment from './components/Comment'
 
 
@@ -44,7 +45,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={VetComponent} />
             <Route path="/:vetid/pet" render={PetComponent} />
-            {/* <Route path="/:vetid/pet/pet:petid/comment" component={Comment}/> */}
+            <Route path="/vet/new" component={NewVetForm}/>
+            {/* <Route path="/:vetid/pet/pet/:petid/comment" component={Comment}/> */}
           </Switch>
         </div>
       </Router>

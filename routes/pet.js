@@ -13,12 +13,6 @@ router.get('/', (req, res, next) => {
     .catch((err) => res.send(err))
 })
 
-// NEW Route
-router.get('/new', (req, res) => {
-  res.render('pet/new', {
-    vetId: req.params.vetId
-  })
-})
 
 // CREATE Route
 router.post('/', (req, res) => {
@@ -28,7 +22,7 @@ router.post('/', (req, res) => {
 
   
   Vet.findById(req.params.vetId)
-    .then((showLeague) => {
+    .then((showPet) => {
 
     
       showVet.pets.push(pet)
