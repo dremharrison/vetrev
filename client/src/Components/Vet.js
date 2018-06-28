@@ -7,11 +7,11 @@ class Vet extends Component {
         vet: []
     }
 
-    // async componentWillMount() {
-    //     const response = await axios.get('/api/vet')
-    //     const vet = response.data
-    //     this.setState({ vet })
-    // }
+    async componentWillMount() {
+        const response = await axios.get('/api/vet')
+        const vet = response.data
+        this.setState({ vet })
+    }
 
     render() {
         return (
@@ -19,24 +19,27 @@ class Vet extends Component {
                 <h1>Veterinarian Companies</h1>
 
                 <h3>Companies:</h3>
-                <div>
-                    <a href="/vet/new">Add New Veterinarian</a>
-                </div>
 
-                {/* {
-                    this.state.vet.map((pet, index) => {
+                
+
+                <Link to="/vet/new">Add New Veterinarian</Link>
+                <Link to="/:vetid/pet">See Pet</Link>
+
+
+                {
+                    this.state.vet.map((vet, index) => {
                         return (
                             <div key={index}>
-                                <div>{this.props.logourl}</div>
-                                <div>Location: {this.props.location}</div>
-                                <div>Member Since: {this.props.memberSince}</div>
+                                <div>{vet.name}</div>
+                                <div>{vet.logourl}</div>
+                                <div>Location: {vet.location}</div>
+                                {/* <div>Member Since: {this.props.memberSince}</div> */}
                                 <div>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</div>
-
-                                <Link to={`/vet/${pet._id}`}> {pet.name}'s Review </Link>
+                                <Link to={`/vet/${vet._id}`}> {vet.name}'s Review </Link>
                             </div>
                         )
                     })
-                } */}
+                }
             </div>
         );
     }
