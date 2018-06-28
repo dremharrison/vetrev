@@ -7,8 +7,8 @@ const Pet = require('../models/pet')
 
 router.get('/', (req, res, next) => {
  
-  Vet.findById(req.params.vetId).then((listOfVets) => {
-      res.render('pet/index', { listOfVets})
+  Vet.findById(req.params.vetId).then((vet) => {
+      res.send({pets: vet.pets})
     })
     .catch((err) => res.send(err))
 })

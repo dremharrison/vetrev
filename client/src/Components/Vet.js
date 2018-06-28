@@ -23,11 +23,9 @@ class Vet extends Component {
                 
 
                 <Link to="/vet/new">Add New Veterinarian</Link>
-                <Link to="/:vetid/pet">See Pet</Link>
 
 
-                {
-                    this.state.vet.map((vet, index) => {
+                {this.state.vet.map((vet, index) => {
                         return (
                             <div key={index}>
                                 <div>{vet.name}</div>
@@ -35,7 +33,7 @@ class Vet extends Component {
                                 <div>Location: {vet.location}</div>
                                 {/* <div>Member Since: {this.props.memberSince}</div> */}
                                 <div>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</div>
-                                <Link to={`/vet/${vet._id}`}> {vet.name}'s Review </Link>
+                                <Link to={`${vet._id}/pet`}> {vet.name}'s Review </Link>
                             </div>
                         )
                     })

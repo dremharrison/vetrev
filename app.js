@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/vet', vetRouter);
-app.use('/vet/:vetId/pet', petRouter);
-app.use('/vet/:vetId/pet/:petID/comments', commentRouter);
+app.use('/api/vet/:vetId/pet', petRouter);
+app.use('/api/vet/:vetId/pet/:petID/comments', commentRouter);
 
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
