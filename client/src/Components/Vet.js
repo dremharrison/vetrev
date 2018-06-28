@@ -7,11 +7,11 @@ class Vet extends Component {
         vet: []
     }
 
-    async componentWillMount() {
-        const response = await axios.get('/api/vet')
-        const vet = response.data
-        this.setState({ vet })
-    }
+    // async componentWillMount() {
+    //     const response = await axios.get('/api/vet')
+    //     const vet = response.data
+    //     this.setState({ vet })
+    // }
 
     render() {
         return (
@@ -23,7 +23,7 @@ class Vet extends Component {
                     <a href="/vet/new">Add New Veterinarian</a>
                 </div>
 
-                {
+                {/* {
                     this.state.vet.map((pet, index) => {
                         return (
                             <div key={index}>
@@ -36,7 +36,7 @@ class Vet extends Component {
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
         );
     }

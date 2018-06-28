@@ -7,8 +7,12 @@ class Pet extends Component {
       <div>
         <h1>Pet Review</h1>
 
-        <div>Username: {this.props.userName}</div>
-        <div>Member Since: {this.props.memberSince}</div>
+        <div>{this.props.logourl}</div>
+        <div>Name: {this.props.userName}</div>
+        <div>Age: {this.props.age}</div>
+        <div>Breed: {this.props.breed}</div>
+        <div>Gender: {this.props.gender}</div>
+        
         <Link to="/">Back to Vets</Link>
 
       </div>
@@ -16,11 +20,5 @@ class Pet extends Component {
   }
 }
 
-name: String,
-logourl: String,
-age: Number,
-breed: String,
-gender: String,
-comments:[commentSchema]
 
-export default UserProfile
+export default Pet

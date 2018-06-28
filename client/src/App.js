@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import Vet from './components/Vet'
-import Pet from './components/Pet'
+import Vet from './Components/Vet'
+import Pet from './Components/Pet'
 import axios from 'axios'
 // import Comment from './components/Comment'
 
@@ -11,11 +11,11 @@ import axios from 'axios'
 
 class App extends Component {
   state = {
-    users: []
+    vets: []
   }
   componentDidMount() {
-    axios.get('/api/users').then((res) => {
-      this.setState({ users: res.data })
+    axios.get('/api/vet').then((res) => {
+      this.setState({ vets: res.data })
     })
 
       .catch((err) => {
@@ -25,17 +25,25 @@ class App extends Component {
 
 
   render() {
-    const ProjectsPage = (props) => {
+    const VetComponent = (props) => {
       return (
-        <Projects users={this.state.users} {...props} />
+        <Vet vets ={this.state.vets} {...props} />
       )
     }
+
+      const PetComponent = (props) => {
+        return (
+          <Pet pets ={this.state.pets} {...props} />
+        )
+    }
+
+
     return (
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Vet} />
-            <Route path="/:vetid/pet" component={Pet} />
+            <Route exact path="/" render={VetComponent} />
+            <Route path="/:vetid/pet" render={PetComponent} />
             {/* <Route path="/:vetid/pet/pet:petid/comment" component={Comment}/> */}
           </Switch>
         </div>
