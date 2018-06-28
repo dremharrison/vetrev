@@ -16,4 +16,11 @@ class Pet extends Component {
   }
 }
 
+name: String,
+logourl: String,
+age: Number,
+breed: String,
+gender: String,
+comments:[commentSchema]
+
 export default UserProfile

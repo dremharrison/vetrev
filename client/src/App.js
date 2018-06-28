@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import React, { Component } from 'react'
 import Vet from './components/Vet'
 import Pet from './components/Pet'
-import Comment from './components/Comment'
+// import Comment from './components/Comment'
 
 
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Vet}/>
             <Route path="/:vetid/pet" component={Pet}/>
-            <Route path="/:vetid/pet/pet:petid/comment" component={Comment}/>
+            {/* <Route path="/:vetid/pet/pet:petid/comment" component={Comment}/> */}
           </Switch>
         </div>
       </Router>
