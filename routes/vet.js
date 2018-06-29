@@ -22,11 +22,11 @@ router.get('/new', (req, res) => {
 // CREATE Route
 router.post('/', (req, res) => {
   console.log('inside post route')
-  const createLeague = req.body
+  const createVet = req.body
   console.log(createVet)
   Vet.create(createVet)
     .then(() => {
-      res.send('/vet')
+      res.send(createVet)
     })
 })
 

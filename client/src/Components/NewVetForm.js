@@ -4,8 +4,14 @@ import { Link } from 'react-router-dom'
 
 class NewVetForm extends Component {
   state = {
-    name: '',
-    description: ''
+    name: "",
+    streetAddress: "",
+    cityStateZip: "",
+    phoneNumber: "",
+    hoursOfOperationOpen: "",
+    hoursOfOperationClose: "",
+    logourl: "",
+    website: "",
   }
 
   handleChange = (event) => {
@@ -19,10 +25,16 @@ class NewVetForm extends Component {
     event.preventDefault()
     const payload = {
       name: this.state.name,
-      description: this.state.description
+    streetAddress: this.state.streetAddress,
+    cityStateZip: this.state.cityStateZip,
+    phoneNumber: this.state.phoneNumber,
+    hoursOfOperationOpen: this.state.hoursOfOperationOpen,
+    hoursOfOperationClose: this.state.hoursOfOperationClose,
+    logourl: this.state.logourl,
+    website: this.state.website,
     }
     await axios.post('/api/vet', payload)
-    await this.props.getAllVet()
+    // await this.props.getAllVet()
   }
 
   render () {
@@ -39,8 +51,12 @@ class NewVetForm extends Component {
           <input onChange={this.handleChange} type="text" name="logourl" value={this.state.logourl}/>
         </div>
         <div>
-          <label htmlFor="location">Location: </label>
-          <input onChange={this.handleChange} type="text" name="location" value={this.state.location}/>
+          <label htmlFor="streetAddress">Street Address: </label>
+          <input onChange={this.handleChange} type="text" name="streetAddress" value={this.state.location}/>
+        </div>
+        <div>
+          <label htmlFor="cityStateZip">City, State Zip: </label>
+          <input onChange={this.handleChange} type="text" name="cityStateZip" value={this.state.location}/>
         </div>
         <div>
           <label htmlFor="hoursOfOperationOpen">Hours of Operation Open: </label>

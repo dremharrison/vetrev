@@ -82,38 +82,50 @@ Vet.remove().then(() => {
 
   const vet1 = new Vet({
     name: "Banfield Pet Hospital",
-    location: "650 Ponce De Leon Ave",
+    streetAddress: "650 Ponce De Leon Ave",
+    cityStateZip:"Atlanta, GA 30309",
+    phoneNumber: "(404) 892-7277",
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    website: "https://www.banfield.com/",
     pets:[pet1,pet2]
   })
 
   const vet2 = new Vet({
-    name: "Banfield Pet Hospital 2",
-    location: "650 Ponce De Leon Ave",
+    name: "Banfield Pet Hospital",
+    streetAddress: "650 Ponce De Leon Ave",
+    cityStateZip:"Atlanta, GA 30309",
+    phoneNumber: "(404) 892-7277",
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
+    website: "https://www.banfield.com/",
     pets:[pet1,pet2]
   })
 
   const vet3 = new Vet({
-    name: "Banfield Pet Hospital 3",
-    location: "650 Ponce De Leon Ave",
+    name: "Banfield Pet Hospital",
+    streetAddress: "650 Ponce De Leon Ave",
+    cityStateZip:"Atlanta, GA 30309",
+    phoneNumber: "(404) 892-7277",
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
-    pets:[pet3,pet4]
+    website: "https://www.banfield.com/",
+    pets:[pet1,pet2]
   })
 
   const vet4 = new Vet({
-    name: "Banfield Pet Hospital 4",
-    location: "650 Ponce De Leon Ave",
+    name: "Banfield Pet Hospital",
+    streetAddress: "650 Ponce De Leon Ave",
+    cityStateZip:"Atlanta, GA 30309",
+    phoneNumber: "(404) 892-7277",
     hoursOfOperationOpen: 8,
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
-    pets:[pet3,pet4]
+    website: "https://www.banfield.com/",
+    pets:[pet1,pet2]
   })
 
 

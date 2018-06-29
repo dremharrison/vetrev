@@ -4,19 +4,39 @@ body {
   font-family: sans-serif;
 }
 
+h1{
+  text-align: center;
+}
+
+.link{
+margin-left: 80%
+}
+
 .vetLogo{
-  width: 225px;
+  width: 300px;
 }
 
 .vetParentDiv{
   display: flex;
   justify-content: center;
+  /* border: solid red; */
 }
 
 .vetDiv{
   border: solid;
   width: 80%;
   margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.vetDivLogo{
+  width: 40%;
+}
+
+
+.vetDivInfo{
+  width: 40%;
 }
 
 .petLogo{

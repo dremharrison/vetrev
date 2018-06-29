@@ -5,7 +5,7 @@ import Vet from './Components/Vet'
 import Pet from './Components/Pet'
 import axios from 'axios'
 import NewVetForm from './Components/NewVetForm';
-// import Comment from './components/Comment'
+import Comment from './Components/Comment'
 
 
 

@@ -18,27 +18,32 @@ class Vet extends Component {
             <div>
                 <h1>Veterinarian Companies</h1>
 
-                <h3>Companies:</h3>
-
                 
 
-                <Link to="/vet/new">Add New Veterinarian</Link>
+
+
+                <Link  className="link" to="/vet/new">Add New Veterinarian</Link>
 
 
                 {this.state.vet.map((vet, index) => {
-                        return (
-                            <div className="vetParentDiv">
+                    return (
+                        <div className="vetParentDiv">
                             <div className="vetDiv" key={index}>
-                                <h3>{vet.name}</h3>
-                                <div><img className="vetLogo" src={vet.logourl}/></div>
-                                <h5>Location: {vet.location}</h5>
-                                <h5>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h5>
-                                <Link to={`${vet._id}/pet`}> {vet.name}'s Review </Link>
-                                <div></div>
+                                <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" src={vet.logourl} /></div>
+                                <div className="vetDivInfo">
+                                    <h4> {vet.streetAddress}</h4>
+                                    <h4> {vet.cityStateZip}</h4>
+                                    <h4> {vet.phoneNumber}</h4>
+                                    <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
+                                    <h4> {vet.website}</h4>
+                                    <Link to={`${vet._id}/pet`}> {vet.name}'s Review </Link>
+                                </div>
+                                <div>
+                                </div>
                             </div>
-                            </div>
-                        )
-                    })
+                        </div>
+                    )
+                })
                 }
             </div>
         );
