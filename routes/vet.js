@@ -6,18 +6,18 @@ const Vet = require('../models/vet')
 router.get('/', (req, res, next) => {
 
   Vet.find().then((listOfVets) => {
-      console.log(listOfVets)
-   
-      res.send(listOfVets)
-    })
+    console.log(listOfVets)
+
+    res.send(listOfVets)
+  })
     .catch((err) => res.send(err))
 
 })
 
 // NEW Route
-router.get('/new', (req, res) => {
-  res.send('vet/new')
-})
+// router.get('/new', (req, res) => {
+//   res.send('vet/new')
+// })
 
 // CREATE Route
 router.post('/', (req, res) => {
@@ -39,33 +39,35 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT Route
-router.get('/:id/edit', (req, res) => {
-  Vet.findById(req.params.id)
-    .then((editVet) => {
-      res.send(editVet)
-    })
-})
+// router.get('/:id/edit', (req, res) => {
+//   Vet.findById(req.params.id)
+//     .then((editVet) => {
+//       res.send(editVet)
+//     })
+// })
 
 // UPDATE Route
-// router.put('/:id', (req, res) => {
-//   Vet.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-//     res.send(`/vet/${req.params.id}`)
-//   })
-// })
-router.put('/:id', async (req,res)=>{
-  const vetId = req.params.id
-  const updatedVet = req.body
-  const savedVet = await Vet.findByIdAndUpdate(vetId, updatedVet)
-  res.send(savedVet)
-  
+router.put('/:id', async (req, res) => {
+  const vet = await Vet.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  res.send({
+    vet
   })
+})
+
+// router.put('/:id', async (req, res) => {
+//   const vetId = req.params.id
+//   const updatedVet = req.body
+//   const savedVet = await Vet.findByIdAndUpdate(vetId, updatedVet)
+//   res.send({savedVet})
+
+// })
 
 // DELETE Route
-router.delete('/:id', (req, res) => {
-  Vet.findByIdAndRemove(req.params.id)
+router.delete('/:id', async (req, res) => {
+  const vet= await Vet.findByIdAndRemove(req.params.id)
     .then(() => {
       console.log('Delete ')
-      res.send('/vet')
+      res.send({vet})
     })
 })
 

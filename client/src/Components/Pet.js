@@ -4,28 +4,72 @@ import axios from 'axios'
 
 class Pet extends Component {
   state = {
-    pet: []
+    pet: [],
+    vet: {}
+  }
+deleteVet = () => {
+const userId = this.props.match.params.id
+//make a delete request to our copy of the api using the params to identify specific idea
+axios.delete(`/api/vet/${userId}`).then((res) => {
+this.getVet(userId)
+
+})
+
+}
+  getVet = () => {
+    const vetId = this.props.match.params.vetid
+    const response = axios.get(`/api/vet/${vetId}`).then(response =>{
+      const vet = response.data
+      console.log(vet)
+      this.setState({vet})
+    })
+
   }
 
-  
+  getPet = () => {
+    // const petId = this.props.match.params.petid
+    const vetId = this.props.match.params.vetid
+    const response = axios.get(`/api/vet/${vetId}/pet`).then(response =>{
+      const pet = response.data.pets
+      this.setState({pet})
+    })
+    
+  }
 
-  async componentWillMount() {
+ componentWillMount() {
   console.log(this.props)
-  const vetId = this.props.match.params.vetid
-  const petId = this.props.match.params.vetid
-    const response = await axios.get(`/api/vet/${vetId}/pet`)
-    const pet = response.data.pets
-    this.setState({ pet })
+  this.getPet()
+  this.getVet()
+  
+  
   }
 
   render() {
+    const vet = this.state.vet || {}
     return (
       <div>
 
         <h1>Pet Review</h1>
-
-
         <Link to="/">Back to Vets</Link>
+        <div className="vetParentDiv">
+                            <div className="vetDiv">
+                                <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" src={vet.logourl} /></div>
+                                <div className="vetDivInfo">
+                                    <h4> {vet.streetAddress}</h4>
+                                    <h4> {vet.cityStateZip}</h4>
+                                    <h4> {vet.phoneNumber}</h4>
+                                    <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
+                                    <h4> {vet.website}</h4>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+
+
+<button onClick={this.deleteUser}>Delete User</button>
+
+        
   {console.log(this.state.pet)}
 
         {this.state.pet.map((pet, index) => {

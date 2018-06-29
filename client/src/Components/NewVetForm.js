@@ -23,8 +23,9 @@ class NewVetForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault()
+
     const payload = {
-      name: this.state.name,
+    name: this.state.name,
     streetAddress: this.state.streetAddress,
     cityStateZip: this.state.cityStateZip,
     phoneNumber: this.state.phoneNumber,
@@ -33,8 +34,10 @@ class NewVetForm extends Component {
     logourl: this.state.logourl,
     website: this.state.website,
     }
+    
+
     await axios.post('/api/vet', payload)
-    // await this.props.getAllVet()
+    await this.props.preventDefault()
   }
 
   render () {
@@ -52,11 +55,15 @@ class NewVetForm extends Component {
         </div>
         <div>
           <label htmlFor="streetAddress">Street Address: </label>
-          <input onChange={this.handleChange} type="text" name="streetAddress" value={this.state.location}/>
+          <input onChange={this.handleChange} type="text" name="streetAddress" value={this.state.streetAddress}/>
         </div>
         <div>
           <label htmlFor="cityStateZip">City, State Zip: </label>
-          <input onChange={this.handleChange} type="text" name="cityStateZip" value={this.state.location}/>
+          <input onChange={this.handleChange} type="text" name="cityStateZip" value={this.state.cityStateZip}/>
+        </div>
+        <div>
+          <label htmlFor="phoneNumber">Phone Number: </label>
+          <input onChange={this.handleChange} type="text" name="phoneNumber" value={this.state.phoneNumber}/>
         </div>
         <div>
           <label htmlFor="hoursOfOperationOpen">Hours of Operation Open: </label>
@@ -65,6 +72,10 @@ class NewVetForm extends Component {
         <div>
           <label htmlFor="hoursOfOperationClose">Hours of Operation Close: </label>
           <input onChange={this.handleChange} type="text" name="hoursOfOperationClose" value={this.state.hoursOfOperationClose}/>
+        </div>
+        <div>
+          <label htmlFor="website">Website: </label>
+          <input onChange={this.handleChange} type="text" name="website" value={this.state.website}/>
         </div>
         <button>Submit</button>
         {/* below needs to go in submit button without redirecting

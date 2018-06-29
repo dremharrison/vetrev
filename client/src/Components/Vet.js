@@ -7,6 +7,8 @@ class Vet extends Component {
         vet: []
     }
 
+    
+
     async componentWillMount() {
         const response = await axios.get('/api/vet')
         const vet = response.data

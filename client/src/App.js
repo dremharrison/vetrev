@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import axios from 'axios'
 import Vet from './Components/Vet'
 import Pet from './Components/Pet'
-import axios from 'axios'
+import ShowVet from './Components/ShowVet'
 import NewVetForm from './Components/NewVetForm';
 import Comment from './Components/Comment'
 
@@ -44,9 +45,10 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" render={VetComponent} />
+            <Route exact path="/:vetid" render={VetComponent} />
             <Route path="/:vetid/pet" render={PetComponent} />
             <Route path="/vet/new" component={NewVetForm}/>
-            {/* <Route path="/:vetid/pet/pet/:petid/comment" component={Comment}/> */}
+            <Route path="/:vetid/pet/pet/:petid/comment" component={Comment}/>
           </Switch>
         </div>
       </Router>
