@@ -8,6 +8,17 @@ body {
   width: 225px;
 }
 
+.vetParentDiv{
+  display: flex;
+  justify-content: center;
+}
+
 .vetDiv{
   border: solid;
+  width: 80%;
+  margin: 20px;
+}
+
+.petLogo{
+  width: 225px;
 }

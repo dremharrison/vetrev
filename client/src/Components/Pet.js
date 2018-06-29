@@ -32,11 +32,12 @@ class Pet extends Component {
           
           return (
             <div key={index}>
-              <div>{pet.logourl}</div>
+              <img  className="petLogo" src={pet.logourl}></img>
               <div>{pet.name}</div>
               <div>Age: {pet.age}</div>
               <div>Breed: {pet.breed}</div>
               <div>Gender: {pet.gender}</div>
+              <div>Comment:{pet.comment}</div>
             </div>
           )
         })
