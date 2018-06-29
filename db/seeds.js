@@ -50,7 +50,8 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    comments:[comment1,comment2]
+    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    
   })
 
   const pet2 = new Pet({
@@ -59,7 +60,8 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    comments:[comment1,comment2]
+    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    
   })
 
   const pet3 = new Pet({
@@ -68,7 +70,8 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    comments:[comment3,comment4]
+    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    
   })
 
   const pet4 = new Pet({
@@ -77,11 +80,12 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    comments:[comment3,comment4]
+    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    
   })
 
   const vet1 = new Vet({
-    name: "Banfield Pet Hospital",
+    name: "Banfield Pet Hospital 1",
     streetAddress: "650 Ponce De Leon Ave",
     cityStateZip:"Atlanta, GA 30309",
     phoneNumber: "(404) 892-7277",
@@ -93,7 +97,7 @@ Vet.remove().then(() => {
   })
 
   const vet2 = new Vet({
-    name: "Banfield Pet Hospital",
+    name: "Banfield Pet Hospital 2",
     streetAddress: "650 Ponce De Leon Ave",
     cityStateZip:"Atlanta, GA 30309",
     phoneNumber: "(404) 892-7277",
@@ -105,7 +109,7 @@ Vet.remove().then(() => {
   })
 
   const vet3 = new Vet({
-    name: "Banfield Pet Hospital",
+    name: "Banfield Pet Hospital 3",
     streetAddress: "650 Ponce De Leon Ave",
     cityStateZip:"Atlanta, GA 30309",
     phoneNumber: "(404) 892-7277",
@@ -117,7 +121,7 @@ Vet.remove().then(() => {
   })
 
   const vet4 = new Vet({
-    name: "Banfield Pet Hospital",
+    name: "Banfield Pet Hospital 4",
     streetAddress: "650 Ponce De Leon Ave",
     cityStateZip:"Atlanta, GA 30309",
     phoneNumber: "(404) 892-7277",

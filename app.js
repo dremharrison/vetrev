@@ -15,11 +15,6 @@ var app = express();
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
-// view engine setup
-
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'hbs');
-
 app.use(express.static(`${__dirname}/client/build`))
 app.use(logger('dev'));
 app.use(express.json());

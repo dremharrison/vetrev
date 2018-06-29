@@ -6,8 +6,6 @@ const Vet = require('../models/vet')
 router.get('/', (req, res, next) => {
 
   Vet.find().then((listOfVets) => {
-    console.log(listOfVets)
-
     res.send(listOfVets)
   })
     .catch((err) => res.send(err))
@@ -23,7 +21,6 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res) => {
   console.log('inside post route')
   const createVet = req.body
-  console.log(createVet)
   Vet.create(createVet)
     .then(() => {
       res.send(createVet)
