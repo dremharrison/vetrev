@@ -10,7 +10,7 @@ body {
   margin-top: -22px;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.5)), url("/images/vetrevheader.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)), url("/images/vetrevheader.jpg") no-repeat center center fixed;
   
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -35,7 +35,16 @@ h3{
 }
 
 .link{
-margin-left: 80%
+margin-left: 68%;
+margin-top: 2%;
+font-size: 16px;
+border-radius: 28px;
+outline: none;
+/* color: white; */
+}
+
+.link:hover{
+  color:orange;
 }
 
 .vetLogo{
@@ -69,6 +78,27 @@ margin-left: 80%
 .vetDivInfo{
   text-align: center;
   width: 40%;
+}
+
+.newVetForm{
+  border: solid;
+  font-size: 20px;
+  padding: 20px;
+  line-height: 150%;
+}
+
+.newVetSubmit{
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-size: 14px;
+}
+button{
+  border-radius: 28px;
+}
+
+.newVetSubmit:hover{
+  color:orange;
 }
 
 .petLogo{
