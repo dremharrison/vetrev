@@ -46,7 +46,7 @@ Vet.remove().then(() => {
 
   const pet1 = new Pet({
     name: 'Chewi',
-    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
@@ -56,7 +56,7 @@ Vet.remove().then(() => {
 
   const pet2 = new Pet({
     name: 'Chewi Jr',
-    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
@@ -66,7 +66,7 @@ Vet.remove().then(() => {
 
   const pet3 = new Pet({
     name: 'Chewi 3',
-    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
@@ -76,7 +76,7 @@ Vet.remove().then(() => {
 
   const pet4 = new Pet({
     name: 'Chewi 4',
-    logourl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
+    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',

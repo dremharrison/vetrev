@@ -3,7 +3,7 @@ const commentSchema = require('./commentSchema')
 
 const petSchema = new Schema({
   name: String,
-  logourl: String,
+  picurl: String,
   age: Number,
   breed: String,
   gender: String,

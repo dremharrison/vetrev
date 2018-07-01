@@ -32,8 +32,24 @@ class NewPetForm extends Component {
           <input onChange={this.handleChange} type="text" name="name" value={this.state.name}/>
         </div>
         <div>
-          <label htmlFor="description">Description: </label>
-          <input onChange={this.handleChange} type="text" name="description" value={this.state.description}/>
+          <label htmlFor="picurl">Pet Pic URL: </label>
+          <input onChange={this.handleChange} type="text" name="picurl" value={this.state.picurl}/>
+        </div>
+        <div>
+          <label htmlFor="age">Age: </label>
+          <input onChange={this.handleChange} type="text" name="age" value={this.state.age}/>
+        </div>
+        <div>
+          <label htmlFor="breed">Breed: </label>
+          <input onChange={this.handleChange} type="text" name="breed" value={this.state.breed}/>
+        </div>
+        <div>
+          <label htmlFor="gender">Gender: </label>
+          <input onChange={this.handleChange} type="text" name="gender" value={this.state.gender}/>
+        </div>
+        <div>
+          <label htmlFor="review">Review: </label>
+          <input onChange={this.handleChange} type="text" name="review" value={this.state.review}/>
         </div>
         <button>Submit</button>
       </form>

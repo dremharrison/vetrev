@@ -78,13 +78,12 @@ class Pet extends Component {
               <div className="petDiv" key={index}>
                 <div className="petDivLogo">
                   <h4>{pet.name}</h4>
-                  <img className="petLogo" src={pet.logourl}></img>
+                  <img className="petLogo" src={pet.picurl}></img>
                 </div>
                 <div className="petDivInfo">
                   <h5>Age: {pet.age}</h5>
                   <h5>Breed: {pet.breed}</h5>
                   <h5>Gender: {pet.gender}</h5>
-                  <h5>Rating: {pet.starRating}</h5>
                   <h5>Review: {pet.review}</h5>
                 </div>
               </div>
