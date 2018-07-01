@@ -64,7 +64,7 @@ class Pet extends Component {
           </div>
         </div>
 
-        <Link to={`${vet._id}/pet/new`}><button className="newReviewButton"  >New Review</button></Link>        
+        <Link to={`./pet/new`}><button className="newReviewButton"  >New Review</button></Link>        
         <button className="petDeleteButton"  onClick={this.deleteVet}>Delete Vet</button>
         <button className="petUpdateButton"  onClick={this.deleteVet}>Update Vet</button>
 

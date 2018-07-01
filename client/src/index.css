@@ -80,8 +80,30 @@ outline: none;
   width: 40%;
 }
 
+
+.vetFormChildDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.newVetFormImg{
+  /* border: solid; */
+  width: 20%;
+  
+}
+
+.newVetFormInfo{
+  /* margin-left: 35%; */
+  font-size: 16px;
+  /* border: solid; */
+  width: 30%;
+}
+
 .newVetForm{
-  border: solid;
+  width: 30%;
+  /* border: solid; */
   font-size: 20px;
   padding: 20px;
   line-height: 150%;
