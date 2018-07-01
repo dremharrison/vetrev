@@ -44,7 +44,7 @@ outline: none;
 }
 
 .link:hover{
-  color:orange;
+  background:orange;
 }
 
 .vetLogo{
@@ -85,7 +85,9 @@ outline: none;
   font-size: 20px;
   padding: 20px;
   line-height: 150%;
+  display: inline-block;
 }
+
 
 .newVetSubmit{
   text-decoration: none;
@@ -93,9 +95,54 @@ outline: none;
   color: black;
   font-size: 14px;
 }
-button{
-  border-radius: 28px;
+
+.backToVetsButton{
+font-size: 14px;
+border-radius: 28px;
+text-decoration: none;
 }
+
+.backToVetsButton:hover{
+  background:orange;
+}
+
+.newReviewButton{
+  font-size: 14px;
+  border-radius: 28px;
+  text-decoration: none;
+  margin-left: 25%; 
+}
+
+.newReviewButton:hover{
+  background:orange;
+}
+
+.petUpdateButton{
+  border-radius: 28px;
+  font-size: 14px;
+  margin-left: 1%;
+}
+
+.petUpdateButton:hover{
+  background:orange;
+}
+
+.petDeleteButton{
+  border-radius: 28px;
+  font-size: 14px;
+  margin-left: 31%;
+  
+  
+}
+
+.petDeleteButton:hover{
+  background:red;
+}
+
+/* button{
+  border-radius: 28px;
+  font-size: 14px;
+} */
 
 .newVetSubmit:hover{
   color:orange;
@@ -105,3 +152,30 @@ button{
   width: 225px;
 }
 
+.petParentDiv{
+  display: flex;
+  justify-content: center;
+  /* border: solid red; */
+}
+
+.petDiv{
+  /* border: solid; */
+  border-width: 2px;
+  width: 50%;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 5px gray;
+}
+
+.petDivLogo{
+  text-align: center;
+  width: 40%;
+  /* border: solid; */
+}
+
+.petDivInfo{
+  text-align: center;
+  width: 40%;
+}

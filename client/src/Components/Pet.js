@@ -10,7 +10,7 @@ class Pet extends Component {
   deleteVet = () => {
     const vetId = this.props.match.params.id
     axios.delete(`/api/vet/${vetId}`).then((res) => {
-      this.getVet({vetId})
+      this.getVet({ vetId })
 
     })
 
@@ -48,7 +48,7 @@ class Pet extends Component {
       <div>
 
         <h1>Pet Review</h1>
-        <Link to="/">Back to Vets</Link>
+        <Link to="/"><button className="backToVetsButton">Back to Vets</button></Link>
         <div className="vetParentDiv">
           <div className="vetDiv">
             <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" src={vet.logourl} /></div>
@@ -64,8 +64,9 @@ class Pet extends Component {
           </div>
         </div>
 
-
-        <button onClick={this.deleteVet}>Delete Vet</button>
+        <Link to={`${vet._id}/pet/new`}><button className="newReviewButton"  >New Review</button></Link>        
+        <button className="petDeleteButton"  onClick={this.deleteVet}>Delete Vet</button>
+        <button className="petUpdateButton"  onClick={this.deleteVet}>Update Vet</button>
 
 
         {console.log(this.state.pet)}
@@ -73,13 +74,20 @@ class Pet extends Component {
         {this.state.pet.map((pet, index) => {
 
           return (
-            <div key={index}>
-              <img className="petLogo" src={pet.logourl}></img>
-              <h4>{pet.name}</h4>
-              <h5>Age: {pet.age}</h5>
-              <h5>Breed: {pet.breed}</h5>
-              <h5>Gender: {pet.gender}</h5>
-              <p>Review:{pet.review}</p>
+            <div className="petParentDiv">
+              <div className="petDiv" key={index}>
+                <div className="petDivLogo">
+                  <h4>{pet.name}</h4>
+                  <img className="petLogo" src={pet.logourl}></img>
+                </div>
+                <div className="petDivInfo">
+                  <h5>Age: {pet.age}</h5>
+                  <h5>Breed: {pet.breed}</h5>
+                  <h5>Gender: {pet.gender}</h5>
+                  <h5>Rating: {pet.starRating}</h5>
+                  <h5>Review: {pet.review}</h5>
+                </div>
+              </div>
             </div>
           )
         })

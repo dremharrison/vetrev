@@ -54,22 +54,18 @@ class NewVetForm extends Component {
             <label htmlFor="logourl">Logo URL: </label>
             <input onChange={this.handleChange} type="text" name="logourl" value={this.state.logourl} />
           </div>
-          <br />
           <div>
             <label htmlFor="streetAddress">Street Address: </label>
             <input onChange={this.handleChange} type="text" name="streetAddress" value={this.state.streetAddress} />
           </div>
-          {"\n"}
           <div>
             <label htmlFor="cityStateZip">City, State Zip: </label>
             <input onChange={this.handleChange} type="text" name="cityStateZip" value={this.state.cityStateZip} />
-          </div>
-          {"\n"}        
+          </div>                  
           <div>
             <label htmlFor="phoneNumber">Phone Number: </label>
             <input onChange={this.handleChange} type="text" name="phoneNumber" value={this.state.phoneNumber} />
-          </div>
-          {"\n"}        
+          </div>                 
           <div>
             <label htmlFor="hoursOfOperationOpen">Hours of Operation Open: </label>
             <input onChange={this.handleChange} type="text" name="hoursOfOperationOpen" value={this.state.hoursOfOperationOpen} />
@@ -77,18 +73,12 @@ class NewVetForm extends Component {
           <div>
             <label htmlFor="hoursOfOperationClose">Hours of Operation Close: </label>
             <input onChange={this.handleChange} type="text" name="hoursOfOperationClose" value={this.state.hoursOfOperationClose} />
-          </div>
-          <p></p>         
+          </div>        
           <div>
             <label htmlFor="website">Website: </label>
             <input onChange={this.handleChange} type="text" name="website" value={this.state.website} />
           </div>
-          <p></p>
-                 
           <button><Link className="newVetSubmit" to="/">Submit</Link></button>
-          
-          {/* below needs to go in submit button without redirecting
-        onClick={this.props.history.push('/api/vet')} */}
         </form>
 
         

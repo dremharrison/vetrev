@@ -27,7 +27,7 @@ class Vet extends Component {
 
                 </div>
                 <Link to="/vet/new">
-                    <button className="link" src="/vet/new">Add New Veterinarian</button>
+                    <button className="link">Add New Veterinarian</button>
                 </Link>
 
 
@@ -36,7 +36,10 @@ class Vet extends Component {
                         return (
                             <div className="vetParentDiv">
                                 <div className="vetDiv" key={index}>
-                                    <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" src={vet.logourl} /></div>
+                                    <div className="vetDivLogo">
+                                    <h2>{vet.name}</h2>
+                                    <img className="vetLogo" src={vet.logourl} />
+                                    </div>
                                     <div className="vetDivInfo">
                                         <h4> {vet.streetAddress}</h4>
                                         <h4> {vet.cityStateZip}</h4>
