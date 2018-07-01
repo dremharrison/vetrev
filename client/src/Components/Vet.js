@@ -17,11 +17,13 @@ class Vet extends Component {
 
     render() {
         return (
-            <div>
+            <div className="mainDiv">
                 <div className="headerDiv">
-                {/* <img src="images/vetrevheader.jpeg"></img> */}
-                    <h1>Veterinarian Companies</h1>
+                    <div className="headerDivInfo">
 
+                        <h1>VetRev</h1>
+                        <h3>Reviews from your local Vet straight from the horses mouth!</h3>
+                    </div>
 
                 </div>
 
@@ -41,7 +43,7 @@ class Vet extends Component {
                                         <h4> {vet.phoneNumber}</h4>
                                         <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
                                         <h4> {vet.website}</h4>
-                                        <Link to={`${vet._id}/pet`}> {vet.name}'s Review </Link>
+                                        <Link to={` ${vet._id}/pet`}>{vet.name}'s Review </Link>
                                     </div>
                                     <div>
                                     </div>

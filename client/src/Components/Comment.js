@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom'
 //                 {this.state.vet.map((vet, index) => {
 //                         return (
 //                             <div className="commentDiv" key={index}>
-//                                 <h3>{comment.subject}</h3>
+//                                 <h4>{comment.subject}</h4>
 //                                 <h5>{comment.date}</h5>
 //                                 <p>{comment.body}</p>
 //                                 <h6>{comment.user}</h6>
