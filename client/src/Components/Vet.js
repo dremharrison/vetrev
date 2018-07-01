@@ -19,6 +19,7 @@ class Vet extends Component {
         return (
             <div>
                 <div className="headerDiv">
+                {/* <img src="images/vetrevheader.jpeg"></img> */}
                     <h1>Veterinarian Companies</h1>
 
 
