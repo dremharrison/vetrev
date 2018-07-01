@@ -7,7 +7,7 @@ const petSchema = new Schema({
   age: Number,
   breed: String,
   gender: String,
-  comments:[commentSchema]
+  review: String
 })
 
 module.exports = petSchema

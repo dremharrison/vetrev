@@ -50,7 +50,7 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
     
   })
 
@@ -60,7 +60,7 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
     
   })
 
@@ -70,7 +70,7 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
     
   })
 
@@ -80,7 +80,7 @@ Vet.remove().then(() => {
     age: 3,
     breed: 'Siberian Husky',
     gender: 'M',
-    Review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
     
   })
 

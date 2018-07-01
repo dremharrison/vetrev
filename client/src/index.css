@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
+.headerDiv{
+  border: solid red;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/vetrevheader.jpg")
+}
+
 h1{
   text-align: center;
 }
@@ -42,3 +49,4 @@ margin-left: 80%
 .petLogo{
   width: 225px;
 }
+
