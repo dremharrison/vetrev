@@ -36,11 +36,11 @@ class Vet extends Component {
                 {
                     this.state.vet.map((vet, index) => {
                         return (
-                            <div className="vetParentDiv">
-                                <div className="vetDiv" key={index}>
+                            <div className="vetParentDiv" key={index}>
+                                <div className="vetDiv" >
                                     <div className="vetDivLogo">
                                     <h2>{vet.name}</h2>
-                                    <img className="vetLogo" src={vet.logourl} />
+                                    <img className="vetLogo" alt="vetLogo" src={vet.logourl} />
                                     </div>
                                     <div className="vetDivInfo">
                                         <h4> {vet.streetAddress}</h4>

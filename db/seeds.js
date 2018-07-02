@@ -55,32 +55,32 @@ Vet.remove().then(() => {
   })
 
   const pet2 = new Pet({
-    name: 'Chewi Jr',
-    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
-    age: 3,
-    breed: 'Siberian Husky',
+    name: 'Buster',
+    picurl: 'https://s7d1.scene7.com/is/image/PETCO/puppy-090517-dog-featured-355w-200h-d',
+    age: 2,
+    breed: 'Lab',
     gender: 'M',
-    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Very clean and amazing treats!",
     
   })
 
   const pet3 = new Pet({
-    name: 'Chewi 3',
-    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
-    age: 3,
-    breed: 'Siberian Husky',
-    gender: 'M',
-    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    name: 'Fancy',
+    picurl: 'https://boygeniusreport.files.wordpress.com/2016/11/puppy-dog.jpg?quality=98&strip=all&w=782',
+    age: 1,
+    breed: 'Lab',
+    gender: 'F',
+    review: "My mom like the doc. I didn't care for the needle!",
     
   })
 
   const pet4 = new Pet({
-    name: 'Chewi 4',
-    picurl: 'https://siberianhusky.com/wp-content/uploads/2016/09/puppyy11.jpg',
-    age: 3,
-    breed: 'Siberian Husky',
+    name: 'Lover Boy',
+    picurl: 'http://www.youthedesigner.com/wp-content/uploads/2011/04/5-Puppy-Love.jpg',
+    age: 1,
+    breed: 'Retriever',
     gender: 'M',
-    review: "Doc was nice! Maybe a little more lube on the anal gland express next time.",
+    review: "Amazing! They have treats!",
     
   })
 
@@ -93,43 +93,43 @@ Vet.remove().then(() => {
     hoursOfOperationClose: 10,
     logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
     website: "https://www.banfield.com/",
-    pets:[pet1,pet2]
+    pets:[pet1,pet4]
   })
 
   const vet2 = new Vet({
-    name: "Banfield Pet Hospital 2",
-    streetAddress: "650 Ponce De Leon Ave",
-    cityStateZip:"Atlanta, GA 30309",
-    phoneNumber: "(404) 892-7277",
-    hoursOfOperationOpen: 8,
-    hoursOfOperationClose: 10,
-    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
-    website: "https://www.banfield.com/",
-    pets:[pet1,pet2]
+    name: "VCA Ansley Square",
+    streetAddress: "1510 Piedmont Ave NE",
+    cityStateZip:"Atlanta, GA 30324",
+    phoneNumber: "(404) 875-7387",
+    hoursOfOperationOpen: 12,
+    hoursOfOperationClose: 12,
+    logourl: "https://www.vca.com/wp-content/uploads/2016/07/logo-blue.png",
+    website: "https://www.vcahospitals.com/",
+    pets:[pet2,pet3]
   })
 
   const vet3 = new Vet({
-    name: "Banfield Pet Hospital 3",
-    streetAddress: "650 Ponce De Leon Ave",
-    cityStateZip:"Atlanta, GA 30309",
-    phoneNumber: "(404) 892-7277",
+    name: "Inman Park Animal Hospital",
+    streetAddress: "926 DeKalb Ave NE",
+    cityStateZip:"Atlanta, GA 30307",
+    phoneNumber: "(404) 341-7400",
     hoursOfOperationOpen: 8,
-    hoursOfOperationClose: 10,
-    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
-    website: "https://www.banfield.com/",
-    pets:[pet1,pet2]
+    hoursOfOperationClose: 6,
+    logourl: "https://www.royacdn.com/unsafe/smart/Site-7654bf6d-47da-47a5-9b0a-5c1d0f7b3435/Logos/Main_logo.png",
+    website: "https://www.inmanparkanimalhospital.com/",
+    pets:[pet1,pet4]
   })
 
   const vet4 = new Vet({
-    name: "Banfield Pet Hospital 4",
-    streetAddress: "650 Ponce De Leon Ave",
-    cityStateZip:"Atlanta, GA 30309",
-    phoneNumber: "(404) 892-7277",
+    name: "Ark Animal Hospital",
+    streetAddress: "288 14th St NW",
+    cityStateZip:"Atlanta, GA 30312",
+    phoneNumber: "(404) 584-7478",
     hoursOfOperationOpen: 8,
-    hoursOfOperationClose: 10,
-    logourl: "http://www.sippycupmom.com/wp-content/uploads/2014/09/Banfield-Logo-for-light-backgrounds.png",
-    website: "https://www.banfield.com/",
-    pets:[pet1,pet2]
+    hoursOfOperationClose: 8,
+    logourl: "http://www.thearkah.com/images/Ark_MainLOGO.jpg",
+    website: "http://www.thearkah.com/",
+    pets:[pet3,pet2]
   })
 
 

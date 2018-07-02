@@ -19,7 +19,7 @@ class Pet extends Component {
   }
   getVet = () => {
     const vetId = this.props.match.params.vetid
-    const response = axios.get(`/api/vet/${vetId}`).then(response => {
+    axios.get(`/api/vet/${vetId}`).then(response => {
       const vet = response.data
       this.setState({ vet })
     })
@@ -29,7 +29,7 @@ class Pet extends Component {
   getPet = () => {
     // const petId = this.props.match.params.petid
     const vetId = this.props.match.params.vetid
-    const response = axios.get(`/api/vet/${vetId}/pet`).then(response => {
+    axios.get(`/api/vet/${vetId}/pet`).then(response => {
       const pet = response.data.pets
       this.setState({ pet })
     })
@@ -54,8 +54,7 @@ class Pet extends Component {
   submitUpdate = (event) => {
     event.preventDefault()
     const updatedVet = this.state.vet
-    const vetId = this.props.match.params.vetId
-    console.log(updatedVet)
+    const vetId = this.props.match.params.vetid
     axios.put(`/api/vet/${vetId}`, updatedVet).then(() => {
       window.location.reload()
     })
@@ -113,7 +112,7 @@ class Pet extends Component {
         <Link to="/"><button className="backToVetsButton">Back to Vets</button></Link>
         <div className="vetParentDiv">
           <div className="vetDiv">
-            <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" src={vet.logourl} /></div>
+            <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" alt="vetLogo" src={vet.logourl} /></div>
             <div className="vetDivInfo">
               <h4> {vet.streetAddress}</h4>
               <h4> {vet.cityStateZip}</h4>
@@ -141,7 +140,7 @@ class Pet extends Component {
               <div className="petDiv" key={index}>
                 <div className="petDivLogo">
                   <h4>{pet.name}</h4>
-                  <img className="petLogo" src={pet.picurl}></img>
+                  <img className="petLogo" alt="petLogo" src={pet.picurl}></img>
                 </div>
                 <div className="petDivInfo">
                   <h5>Age: {pet.age}</h5>

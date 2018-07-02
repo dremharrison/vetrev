@@ -45,6 +45,7 @@ router.get('/:id', (req, res) => {
 
 // UPDATE Route
 router.put('/:id', async (req, res) => {
+  console.log(req.params)
   const vet = await Vet.findByIdAndUpdate(req.params.id, req.body, {new: true})
   res.send({
     vet
