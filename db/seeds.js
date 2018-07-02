@@ -1,8 +1,8 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
-const Vet = require('../models/Vet')
-const Pet = require('../models/Pet')
-const Comment = require('../models/Comment')
+const Vet = require('../models/vet')
+const Pet = require('../models/pet')
+const Comment = require('../models/comment')
 
 // Connect to Database
 mongoose.connect('mongodb://localhost/vetrev')
