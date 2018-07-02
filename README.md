@@ -11,10 +11,10 @@ https://limitless-sands-70985.herokuapp.com/
 https://trello.com/b/S0eBxY73/vet-rev
 
 ## Wireframe
-![pic](wireframe.jpeg)
+![pic](/public/images/wireframe.jpeg)
 
 ## ERD
-![pic](erd.jpeg)
+![pic](/public/images/erd.jpeg)
 
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript
