@@ -18,7 +18,8 @@ https://trello.com/b/S0eBxY73/vet-rev
 
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript
-Library: JSX
+Frameworks - React, Express
+Library - JSX
 Project Planning & User Stories - Trello
 Visual Studio Code
 
