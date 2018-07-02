@@ -15,6 +15,8 @@ class Vet extends Component {
         this.setState({ vet })
     }
 
+
+
     render() {
         return (
             <div className="mainDiv">
@@ -22,7 +24,7 @@ class Vet extends Component {
                     <div className="headerDivInfo">
 
                         <h1>VetRev</h1>
-                        <h3>Reviews from your local Veterinarian straight from the horses mouth!</h3>
+                        <h3>Reviews from your local Veterinarian straight from the horses mouth</h3>
                     </div>
 
                 </div>
@@ -46,7 +48,7 @@ class Vet extends Component {
                                         <h4> {vet.phoneNumber}</h4>
                                         <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
                                         <h4> {vet.website}</h4>
-                                        <Link to={`${vet._id}/pet`}>{vet.name}'s Review </Link>
+                                        <Link className="linkToReview" to={`${vet._id}/pet`}>{vet.name}'s Review </Link>
                                     </div>
                                     <div>
                                     </div>

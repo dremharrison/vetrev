@@ -41,6 +41,12 @@ border-radius: 28px;
 
 .link:hover{
   background:orange;
+  color: white;
+}
+
+.linkToReview{
+  text-decoration: none;
+  color: orange;
 }
 
 .vetLogo{

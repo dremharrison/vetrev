@@ -46,6 +46,8 @@ class NewVetForm extends Component {
       <div className="vetFormParentDiv">
         <h1>New Veterinarian</h1>
         
+        <Link to="/"><button className="backToVetsButton">Back to Vets</button></Link>
+        
         <div className="vetFormChildDiv">
           <p className="newVetFormInfo">Eiusmod nisi elit proident officia labore laboris nulla. Sint anim aliquip eiusmod eiusmod ut aliqua pariatur. Consectetur amet laboris eiusmod labore aute cupidatat. Mollit velit proident adipisicing ullamco enim velit velit. Consectetur quis sint qui dolor anim ad nisi adipisicing velit esse laborum. Elit occaecat aute Lorem officia proident mollit est. Nulla in non exercitation Lorem anim.</p>
           <img className="newVetFormImg" src="/images/mancarryingdog.jpg" />
