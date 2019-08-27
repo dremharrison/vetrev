@@ -1,10 +1,20 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class NewPetForm extends Component {
   state = {
     name: '',
-    description: ''
+    picurl: '',
+    age: '',
+    breed: '',
+    gender: '',
+    review: ''
+  }
+
+  componentWillMount(){
+    console.log(this.props)
+    console.log(this.props.props.match.params.vetid)
   }
 
   handleChange = (event) => {
@@ -18,41 +28,50 @@ class NewPetForm extends Component {
     event.preventDefault()
     const payload = {
       name: this.state.name,
-      description: this.state.description
+      description: this.state.picurl,
+      age: this.state.age,
+      breed: this.state.breed,
+      gender: this.state.gender,
+      review: this.state.review
     }
-    await axios.post('/api/pet', payload)
-    await this.props.getAllPet()
+    const vetId = this.props.props.match.params.vetid
+    console.log(vetId)
+    await axios.post(`/api/vet/${vetId}/pet`, payload)
+    // await this.props.getAllPet()
   }
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor="name">Name: </label>
-          <input onChange={this.handleChange} type="text" name="name" value={this.state.name}/>
-        </div>
-        <div>
-          <label htmlFor="picurl">Pet Pic URL: </label>
-          <input onChange={this.handleChange} type="text" name="picurl" value={this.state.picurl}/>
-        </div>
-        <div>
-          <label htmlFor="age">Age: </label>
-          <input onChange={this.handleChange} type="text" name="age" value={this.state.age}/>
-        </div>
-        <div>
-          <label htmlFor="breed">Breed: </label>
-          <input onChange={this.handleChange} type="text" name="breed" value={this.state.breed}/>
-        </div>
-        <div>
-          <label htmlFor="gender">Gender: </label>
-          <input onChange={this.handleChange} type="text" name="gender" value={this.state.gender}/>
-        </div>
-        <div>
-          <label htmlFor="review">Review: </label>
-          <input onChange={this.handleChange} type="text" name="review" value={this.state.review}/>
-        </div>
-        <button>Submit</button>
-      </form>
+      <div className = "newPetFormDiv">
+        <h4>New Pet Review</h4>
+      <Form onSubmit={this.handleSubmit}>
+        <FormGroup>
+          <Label htmlFor="name">Name: </Label>
+          <Input onChange={this.handleChange} type="text" name="name" value={this.state.name}/>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="picurl">Pet Pic URL: </Label>
+          <Input onChange={this.handleChange} type="text" name="picurl" value={this.state.picurl}/>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="age">Age: </Label>
+          <Input onChange={this.handleChange} type="text" name="age" value={this.state.age}/>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="breed">Breed: </Label>
+          <Input onChange={this.handleChange} type="text" name="breed" value={this.state.breed}/>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="gender">Gender: </Label>
+          <Input onChange={this.handleChange} type="text" name="gender" value={this.state.gender}/>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="review">Review: </Label>
+          <Input onChange={this.handleChange} type="text" name="review" value={this.state.review}/>
+        </FormGroup>
+        <Button>Submit</Button>
+      </Form>
+      </div>
     )
   }
 }

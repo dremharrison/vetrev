@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import NewPetForm from './NewPetForm';
+import UpdateVetForm from './UpdateVetForm';
 
 class Pet extends Component {
   state = {
     pet: [],
-    vet: {},
-    editVet: false
+    editVet: false,
+    newPetForm: false
   }
+
   deleteVet = () => {
 
     const vetId = this.props.match.params.vetid
@@ -28,6 +31,7 @@ class Pet extends Component {
 
   getPet = () => {
     // const petId = this.props.match.params.petid
+    // console.log(petId)
     const vetId = this.props.match.params.vetid
     axios.get(`/api/vet/${vetId}/pet`).then(response => {
       const pet = response.data.pets
@@ -42,68 +46,19 @@ class Pet extends Component {
     this.getVet()
   }
 
-  handleUpdate = (event) => {
-    const copyOfState = { ...this.state.vet }
-    const attributeName = event.target.name
-    const attributeValue = event.target.value
-    copyOfState[attributeName] = attributeValue
 
-    this.setState({ vet: copyOfState })
+
+  toggleNewPetFormButton = () => {
+    const canEdit = !this.state.newPetForm
+    this.setState({ newPetForm: canEdit })
   }
 
-  submitUpdate = (event) => {
-    event.preventDefault()
-    const updatedVet = this.state.vet
-    const vetId = this.props.match.params.vetid
-    axios.put(`/api/vet/${vetId}`, updatedVet).then(() => {
-      window.location.reload()
-    })
-  }
-
-  toggleButton = () => {
+  toggleUpdateVetFormButton = () => {
     const canEdit = !this.state.editVet
     this.setState({ editVet: canEdit })
   }
 
   render() {
-    
-    const updateForm = (<form className="newVetForm" onSubmit={this.submitUpdate}>
-
-          <div>
-            <label htmlFor="name">Name: </label>
-            <input onChange={this.handleUpdate} type="text" name="name" value={this.state.name} />
-          </div>
-          <div>
-            <label htmlFor="logourl">Logo URL: </label>
-            <input onChange={this.handleUpdate} type="text" name="logourl" value={this.state.logourl} />
-          </div>
-          <div>
-            <label htmlFor="streetAddress">Street Address: </label>
-            <input onChange={this.handleUpdate} type="text" name="streetAddress" value={this.state.streetAddress} />
-          </div>
-          <div>
-            <label htmlFor="cityStateZip">City, State Zip: </label>
-            <input onChange={this.handleUpdate} type="text" name="cityStateZip" value={this.state.cityStateZip} />
-          </div>
-          <div>
-            <label htmlFor="phoneNumber">Phone Number: </label>
-            <input onChange={this.handleUpdate} type="text" name="phoneNumber" value={this.state.phoneNumber} />
-          </div>
-          <div>
-            <label htmlFor="hoursOfOperationOpen">Hours of Operation Open: </label>
-            <input onChange={this.handleUpdate} type="text" name="hoursOfOperationOpen" value={this.state.hoursOfOperationOpen} />
-          </div>
-          <div>
-            <label htmlFor="hoursOfOperationClose">Hours of Operation Close: </label>
-            <input onChange={this.handleUpdate} type="text" name="hoursOfOperationClose" value={this.state.hoursOfOperationClose} />
-          </div>
-          <div>
-            <label htmlFor="website">Website: </label>
-            <input onChange={this.handleUpdate} type="text" name="website" value={this.state.website} />
-          </div>
-          <input type="submit" value="Update"/>
-        </form>)
-
     const vet = this.state.vet || {}
     return (
       <div>
@@ -114,22 +69,24 @@ class Pet extends Component {
           <div className="vetDiv">
             <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" alt="vetLogo" src={vet.logourl} /></div>
             <div className="vetDivInfo">
-              <h4> {vet.streetAddress}</h4>
-              <h4> {vet.cityStateZip}</h4>
-              <h4> {vet.phoneNumber}</h4>
-              <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
-              <h4> {vet.website}</h4>
+              <h6> {vet.streetAddress}</h6>
+              <h6> {vet.cityStateZip}</h6>
+              <h6> {vet.phoneNumber}</h6>
+              <h6>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h6>
+              <a href={vet.website} target="_blank">{vet.website}</a>
             </div>
             <div>
             </div>
           </div>
         </div>
 
-        <Link to={`./pet/new`}><button className="newReviewButton"  >New Review</button></Link>
+        <button className="newReviewButton" onClick={this.toggleNewPetFormButton} >New Review</button>
         <button className="petDeleteButton" onClick={this.deleteVet}>Delete Vet</button>
-        <button className="petUpdateButton" onClick={this.toggleButton}>Update Vet</button>
+        <button className="petUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
 
-        
+
+        {this.state.newPetForm ? <NewPetForm props={this.props} /> : null}
+        {this.state.editVet ? <UpdateVetForm props={this.props}/> : null}
 
         {console.log(this.state.pet)}
 
@@ -139,23 +96,21 @@ class Pet extends Component {
             <div className="petParentDiv">
               <div className="petDiv" key={index}>
                 <div className="petDivLogo">
-                  <h4>{pet.name}</h4>
-                  <img className="petLogo" alt="petLogo" src={pet.picurl}></img>
+                  <h5>{pet.name}</h5>
+                  <img className="petLogo" alt="pet" src={pet.picurl}></img>
                 </div>
                 <div className="petDivInfo">
-                  <h5>Age: {pet.age}</h5>
-                  <h5>Breed: {pet.breed}</h5>
-                  <h5>Gender: {pet.gender}</h5>
-                  <h5>Review: {pet.review}</h5>
+                  <h6>Age: {pet.age}</h6>
+                  <h6>Breed: {pet.breed}</h6>
+                  <h6>Gender: {pet.gender}</h6>
+                  <h6>Review: {pet.review}</h6>
                 </div>
               </div>
-            </div>
 
-        
+            </div>
           )
         })
         }
-        {this.state.editVet ? updateForm : null}
       </div>
     );
   }

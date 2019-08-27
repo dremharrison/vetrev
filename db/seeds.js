@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/vetrev')
     console.log('ERROR', err)
   })
 
-// Remove old Homework Data
+// Remove old data
 Vet.remove().then(() => {
 
   const comment1 = new Comment({

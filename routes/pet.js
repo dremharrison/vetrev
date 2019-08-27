@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
 
   
   Vet.findById(req.params.vetId)
-    .then((showPet) => {
+    .then((showVet) => {
 
     
       showVet.pets.push(pet)
@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
     .then(() => {
 
     
-      res.redirect(`/vet/${req.params.vetId}`)
+      res.redirect(`/vet/${req.params.vetId}/pet`)
     })
 })
 

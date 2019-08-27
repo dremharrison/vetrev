@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import axios from 'axios'
-import Vet from './Components/Vet'
-import Pet from './Components/Pet'
+import axios from 'axios';
+import Vet from './Components/Vet';
+import Pet from './Components/Pet';
 import NewVetForm from './Components/NewVetForm';
 import NewPetForm from './Components/NewPetForm';
-import Comment from './Components/Comment'
+import Comment from './Components/Comment';
 
 
 
@@ -29,14 +29,14 @@ class App extends Component {
   render() {
     const VetComponent = (props) => {
       return (
-        <Vet vets ={this.state.vets} {...props} />
+        <Vet vets={this.state.vets} {...props} />
       )
     }
 
-      const PetComponent = (props) => {
-        return (
-          <Pet pets ={this.state.pets} {...props} />
-        )
+    const PetComponent = (props) => {
+      return (
+        <Pet pets={this.state.pets} {...props} />
+      )
     }
 
 
@@ -46,9 +46,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={VetComponent} />
             <Route path="/:vetid/pet" component={PetComponent} />
-            <Route path="/vet/new" component={NewVetForm}/>
-            <Route path="/:vetid/pet/new" component={NewPetForm}/>            
-            <Route path="/:vetid/pet/pet/:petid/comment" component={Comment}/>
+            <Route path="/vet/new" component={NewVetForm} />
+            <Route exact path="/:vetid/pet/new" component={NewPetForm} />
+            <Route path="/:vetid/pet/:petid/comment" component={Comment} />
           </Switch>
         </div>
       </Router>

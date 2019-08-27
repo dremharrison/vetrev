@@ -13,6 +13,7 @@ class Vet extends Component {
         const response = await axios.get('/api/vet')
         const vet = response.data
         this.setState({ vet })
+        console.log(this.state.vet)
     }
 
 
@@ -39,16 +40,15 @@ class Vet extends Component {
                             <div className="vetParentDiv" key={index}>
                                 <div className="vetDiv" >
                                     <div className="vetDivLogo">
-                                    <h2>{vet.name}</h2>
                                     <img className="vetLogo" alt="vetLogo" src={vet.logourl} />
+                                    <Link className="linkToReview" to={`${vet._id}/pet`}><h4>{vet.name}'s Review</h4></Link>
                                     </div>
                                     <div className="vetDivInfo">
-                                        <h4> {vet.streetAddress}</h4>
-                                        <h4> {vet.cityStateZip}</h4>
-                                        <h4> {vet.phoneNumber}</h4>
-                                        <h4>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h4>
-                                        <h4> {vet.website}</h4>
-                                        <Link className="linkToReview" to={`${vet._id}/pet`}>{vet.name}'s Review </Link>
+                                        <h6> {vet.streetAddress}</h6>
+                                        <h6> {vet.cityStateZip}</h6>
+                                        <h6> {vet.phoneNumber}</h6>
+                                        <h6>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h6>
+                                        <a href={vet.website} target="_blank">{vet.website}</a>
                                     </div>
                                     <div>
                                     </div>
