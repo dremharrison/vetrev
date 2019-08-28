@@ -18,10 +18,9 @@ https://trello.com/b/S0eBxY73/vet-rev
 
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript<br />
-Frameworks & Libraries - React, Express, MongoDB, Mongoose, Axios<br />
+Frameworks & Libraries - React, Express, MongoDB, Mongoose, Axios, BootStrap, Reactstrap<br />
 Project Planning & User Stories - Trello<br />
 Visual Studio Code<br />
-BootStrap, Reactstrap<br />
 
 ## Future Version
 Star ratings will be included with the review.
