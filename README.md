@@ -2,7 +2,7 @@
 
 ## Overview
 
-On the landing page users are shown a list of Veterinarians. Once in the vet they can see or create a review for the vet.
+On the landing page users are shown a list of Veterinarians or given the option to add a veterinarian. A user may choose to check the review's of the veterinarian, where they may also create a review for the vet as well.
 
 ## Link to Site
 https://vetrev.herokuapp.com/
@@ -17,12 +17,12 @@ https://trello.com/b/S0eBxY73/vet-rev
 ![pic](/public/images/erd.jpeg)
 
 ## Technologies Used
-Languages - HTML5, CSS3, Javascript
-Frameworks - React, Express
-Library - JSX
-Project Planning & User Stories - Trello
-Visual Studio Code
+Languages - HTML5, CSS3, Javascript<br />
+Frameworks - React, Express<br />
+Library - JSX<br />
+Project Planning & User Stories - Trello<br />
+Visual Studio Code<br />
+BootStrap, Reactstrap<br />
 
 ## Future Version
-Create will be on the same page as info. With a toggle button to show.
 Star ratings will be included with the review.
