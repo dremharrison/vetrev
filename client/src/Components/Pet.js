@@ -100,7 +100,7 @@ class Pet extends Component {
 
         {console.log(petReversed)}
 
-        {this.state.pet.reverse().map((pet, index) => {
+        {this.state.pet.slice(0).map((pet, index) => {
 
           return (
             <div className="petParentDiv" key={index}>
