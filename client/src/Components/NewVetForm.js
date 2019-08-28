@@ -51,7 +51,7 @@ class NewVetForm extends Component {
         <div className="newVetHeaderDiv">
           <div className="headerDivInfo">
             <h1>Add A New Veterinarian</h1>
-            <h3>Don't See Your Vet? Add a new vet, then add a review!</h3>
+            <h3>Add a new vet, then add a review!</h3>
           </div>
         </div>
 

@@ -80,7 +80,7 @@ class Pet extends Component {
         </div>
 
         <button className="newReviewButton" onClick={this.toggleNewPetFormButton} >New Review</button>
-        <button className="petDeleteButton" onClick={(e) => {if (window.confirm("Are you sure you would like to delte this vet? This CAN'T be undone!")) this.deleteVet(e)}}>Delete Vet</button>
+        <button className="petDeleteButton" onClick={(e) => {if (window.confirm("Are you sure you would like to delete this vet? This CAN'T be undone!")) this.deleteVet(e)}}>Delete Vet</button>
         <button className="petUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
 
 
