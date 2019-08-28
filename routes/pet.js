@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   Vet.findById(req.params.vetId).remove
     .then((vet) => {
-      const showPet = league.pets.id(req.params.id)
+      const showPet = vet.pets.id(req.params.id)
       res.render('pet/show', { showPet, vetId: req.params.vetId })
     })
 })

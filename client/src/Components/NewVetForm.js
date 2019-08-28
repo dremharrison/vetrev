@@ -40,6 +40,7 @@ class NewVetForm extends Component {
 
 
     await axios.post('/api/vet', payload)
+    this.props.history.push("/")
   }
 
   render() {

@@ -18,7 +18,7 @@ class Pet extends Component {
     axios.delete(`/api/vet/${vetId}`).then((res) => {
       this.getVet({ vetId })
     })
-
+    this.props.history.push("/")
   }
   getVet = () => {
     const vetId = this.props.match.params.vetid
@@ -30,8 +30,6 @@ class Pet extends Component {
   }
 
   getPet = () => {
-    // const petId = this.props.match.params.petid
-    // console.log(petId)
     const vetId = this.props.match.params.vetid
     axios.get(`/api/vet/${vetId}/pet`).then(response => {
       const pet = response.data.pets
@@ -60,6 +58,7 @@ class Pet extends Component {
 
   render() {
     const vet = this.state.vet || {}
+    const petReversed  = this.state.pet.reverse()
     return (
       <div>
 
@@ -69,10 +68,10 @@ class Pet extends Component {
           <div className="vetDiv">
             <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" alt="vetLogo" src={vet.logourl} /></div>
             <div className="vetDivInfo">
-              <h6> {vet.streetAddress}</h6>
-              <h6> {vet.cityStateZip}</h6>
-              <h6> {vet.phoneNumber}</h6>
-              <h6>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h6>
+              <h5> {vet.streetAddress}</h5>
+              <h5> {vet.cityStateZip}</h5>
+              <h5> {vet.phoneNumber}</h5>
+              <h5>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h5>
               <a href={vet.website} target="_blank">{vet.website}</a>
             </div>
             <div>
@@ -81,32 +80,47 @@ class Pet extends Component {
         </div>
 
         <button className="newReviewButton" onClick={this.toggleNewPetFormButton} >New Review</button>
-        <button className="petDeleteButton" onClick={this.deleteVet}>Delete Vet</button>
+        <button className="petDeleteButton" onClick={(e) => {if (window.confirm("Are you sure you would like to delte this vet? This CAN'T be undone!")) this.deleteVet(e)}}>Delete Vet</button>
         <button className="petUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
 
 
-        {this.state.newPetForm ? <NewPetForm props={this.props} /> : null}
-        {this.state.editVet ? <UpdateVetForm props={this.props}/> : null}
+        {this.state.newPetForm ? 
+        <NewPetForm 
+        toggleNewPetFormButton={this.toggleNewPetFormButton.bind(this)} 
+        getPet={this.getPet.bind(this)}
+        props={this.props} /> 
+        : null}
 
-        {console.log(this.state.pet)}
 
-        {this.state.pet.map((pet, index) => {
+        {this.state.editVet ? 
+        <UpdateVetForm 
+        toggleUpdateVetFormButton={this.toggleUpdateVetFormButton.bind(this)} 
+        props={this.props}/> 
+        : null}
+
+        {console.log(petReversed)}
+
+        {this.state.pet.reverse().map((pet, index) => {
 
           return (
-            <div className="petParentDiv">
-              <div className="petDiv" key={index}>
-                <div className="petDivLogo">
+            <div className="petParentDiv" key={index}>
+              <div className="petDiv" >
+                <div className="petDivLogo" >
                   <h5>{pet.name}</h5>
-                  <img className="petLogo" alt="pet" src={pet.picurl}></img>
+                  <img className="petLogo" alt="pet" src={pet.picurl}></img>        
+                
                 </div>
+                
                 <div className="petDivInfo">
                   <h6>Age: {pet.age}</h6>
                   <h6>Breed: {pet.breed}</h6>
                   <h6>Gender: {pet.gender}</h6>
                   <h6>Review: {pet.review}</h6>
+          {/* {console.log(pet._id)} */}
                 </div>
-              </div>
-
+                
+              </div> 
+              
             </div>
           )
         })

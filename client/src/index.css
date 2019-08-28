@@ -196,7 +196,19 @@ margin-top: 2.5%;
   outline: none; 
 }
 
+.petReviewDeleteButton{
+  border-radius: 28px;
+  font-size: 14px;
+  outline: none;
+  margin-top: 5%;
+}
+
 .petDeleteButton:hover{
+  background:red;
+  color: white;
+}
+
+.petReviewDeleteButton:hover{
   background:red;
   color: white;
 }

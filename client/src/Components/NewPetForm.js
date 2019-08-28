@@ -13,7 +13,6 @@ class NewPetForm extends Component {
   }
 
   componentWillMount(){
-    console.log(this.props)
     console.log(this.props.props.match.params.vetid)
   }
 
@@ -32,12 +31,14 @@ class NewPetForm extends Component {
       age: this.state.age,
       breed: this.state.breed,
       gender: this.state.gender,
-      review: this.state.review
+      review: this.state.review,
+      picurl: this.state.picurl
     }
     const vetId = this.props.props.match.params.vetid
     console.log(vetId)
     await axios.post(`/api/vet/${vetId}/pet`, payload)
-    // await this.props.getAllPet()
+    this.props.toggleNewPetFormButton()
+    this.props.getPet()
   }
 
   render () {

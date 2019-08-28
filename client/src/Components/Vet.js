@@ -44,10 +44,10 @@ class Vet extends Component {
                                     <Link className="linkToReview" to={`${vet._id}/pet`}><h4>{vet.name}'s Review</h4></Link>
                                     </div>
                                     <div className="vetDivInfo">
-                                        <h6> {vet.streetAddress}</h6>
-                                        <h6> {vet.cityStateZip}</h6>
-                                        <h6> {vet.phoneNumber}</h6>
-                                        <h6>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h6>
+                                        <h5> {vet.streetAddress}</h5>
+                                        <h5> {vet.cityStateZip}</h5>
+                                        <h5> {vet.phoneNumber}</h5>
+                                        <h5>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h5>
                                         <a href={vet.website} target="_blank">{vet.website}</a>
                                     </div>
                                     <div>

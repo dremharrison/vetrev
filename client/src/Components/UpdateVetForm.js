@@ -24,6 +24,7 @@ class UpdateVetForm extends Component {
         axios.put(`/api/vet/${vetId}`, updatedVet).then(() => {
           window.location.reload()
         })
+        this.props.toggleUpdateVetFormButton()
       }
 
     render() {
