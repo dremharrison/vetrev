@@ -40,7 +40,7 @@ class Vet extends Component {
                                     <img className="vetLogo" alt="vetLogo" src={vet.logourl} />
                                     <Link className="linkToReview" to={`${vet._id}/pet`}><h4>{vet.name}'s Review</h4></Link>
                                     </div>
-                                    <div className="vetDivInfo">
+                                    <div className="vetDivInfo d-flex align-items-center">
                                         <h5> {vet.streetAddress}</h5>
                                         <h5> {vet.cityStateZip}</h5>
                                         <h5> {vet.phoneNumber}</h5>

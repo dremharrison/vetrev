@@ -67,10 +67,10 @@ class Pet extends Component {
           <div className="d-flex justify-content-center align-items-end mb-2">
 
             <div className="petHeaderDivInfo">
-              <h1>{vet.name}This</h1>
-              <h5> {vet.streetAddress}Street</h5>
-              <h5> {vet.cityStateZip}Zip</h5>
-              <a href={vet.website} target="_blank">{vet.website}http</a>
+              <h1>{vet.name}</h1>
+              <h5> {vet.streetAddress}</h5>
+              <h5> {vet.cityStateZip}</h5>
+              <a href={vet.website} target="_blank">{vet.website}</a>
             </div>
             <button className="petVetDeleteButton" onClick={(e) => { if (window.confirm("Are you sure you would like to delete this vet? This CAN'T be undone!")) this.deleteVet(e) }}>Delete Vet</button>
             <button className="petVetUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
