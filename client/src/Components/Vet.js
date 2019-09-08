@@ -35,12 +35,12 @@ class Vet extends Component {
                     this.state.vet.map((vet, index) => {
                         return (
                             <div className="vetParentDiv" key={index}>
-                                <div className="vetDiv" >
+                                <div className="vetDiv d-flex align-items-center" >
                                     <div className="vetDivLogo">
                                     <img className="vetLogo" alt="vetLogo" src={vet.logourl} />
                                     <Link className="linkToReview" to={`${vet._id}/pet`}><h4>{vet.name}'s Review</h4></Link>
                                     </div>
-                                    <div className="vetDivInfo d-flex align-items-center">
+                                    <div className="vetDivInfo align-items-center justify-content-center">
                                         <h5> {vet.streetAddress}</h5>
                                         <h5> {vet.cityStateZip}</h5>
                                         <h5> {vet.phoneNumber}</h5>
