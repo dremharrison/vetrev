@@ -9,7 +9,7 @@ class NewVetHeader extends Component {
                 <div className="d-flex justify-content-center align-items-center">
 
                     <div className="headerDivInfo">
-                        <h1>Add A New Veterinarian</h1>
+                        <h1>New Vet</h1>
                         <h3>Add a new vet, then add a review!</h3>
                     </div>
                 </div>

@@ -45,30 +45,30 @@ class NewPetForm extends Component {
     return (
       <div className = "newPetFormDiv">
         <h4>New Pet Review</h4>
-      <Form onSubmit={this.handleSubmit}>
+      <Form className="border p-4" onSubmit={this.handleSubmit}>
         <FormGroup>
           <Label htmlFor="name">Name: </Label>
-          <Input onChange={this.handleChange} type="text" name="name" value={this.state.name}/>
+          <Input onChange={this.handleChange} placeholder='eg. "Chester"' type="text" name="name" value={this.state.name}/>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="picurl">Pet Pic URL: </Label>
-          <Input onChange={this.handleChange} type="text" name="picurl" value={this.state.picurl}/>
+          <Input onChange={this.handleChange} placeholder='eg. "http://www.domain.com/pic"' type="text" name="picurl" value={this.state.picurl}/>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="age">Age: </Label>
-          <Input onChange={this.handleChange} type="text" name="age" value={this.state.age}/>
+          <Input onChange={this.handleChange} placeholder='eg. "2 Years Old"' type="text" name="age" value={this.state.age}/>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="breed">Breed: </Label>
-          <Input onChange={this.handleChange} type="text" name="breed" value={this.state.breed}/>
+          <Input onChange={this.handleChange} placeholder='eg. "Boxer"' type="text" name="breed" value={this.state.breed}/>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="gender">Gender: </Label>
-          <Input onChange={this.handleChange} type="text" name="gender" value={this.state.gender}/>
+          <Input onChange={this.handleChange} placeholder='eg. "Male"' type="text" name="gender" value={this.state.gender}/>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="review">Review: </Label>
-          <Input onChange={this.handleChange} type="text" name="review" value={this.state.review}/>
+          <Input onChange={this.handleChange} placeholder='eg. "I love this place and Dr. Ramirez!"' type="text" name="review" value={this.state.review}/>
         </FormGroup>
         <Button>Submit</Button>
       </Form>

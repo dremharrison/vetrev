@@ -7,20 +7,19 @@ body {
 .vetHeader {
   width: 100vw;
   height: 20vh;
-  border: solid orange;
   display: flex;
   justify-content: space-around;
 }
 
 .vetHeaderImgOne {
   width: 12vw;
-  height: 31vh;
+  height: 32vh;
   z-index: 1;
 }
 
 .vetHeaderImgTwo {
   width: 11vw;
-  height: 23.3vh;
+  height: 24vh;
   z-index: 1;
 }
 
@@ -47,14 +46,13 @@ body {
 .newVetHeader {
   width: 100vw;
   height: 20vh;
-  border: solid orange;
   display: flex;
   justify-content: space-around;
 }
 
 .newVetHeaderImgOne {
   width: 14vw;
-  height: 23.5vh;
+  height: 24.5vh;
   -ms-transform: rotate(-2deg); /* IE 9 */
   -webkit-transform: rotate(-2deg); /* Safari 3-8 */
   transform: rotate(-2deg);
@@ -62,9 +60,17 @@ body {
 }
 
 .newVetHeaderImgTwo {
-  width: 14vw;
-  height: 19.3vh;
+  width: 15vw;
+  height: 20vh;
   z-index: 1;
+}
+
+.newVetFormImgOne {
+  width: 15vw;
+  height: 35vh;
+  transform: rotateY(180deg);
+  margin-left: -15vw;
+
 }
 
 .newVetHeaderDiv{
@@ -81,7 +87,6 @@ body {
 .petHeader {
   width: 100vw;
   height: 20vh;
-  border: solid orange;
   display: flex;
   justify-content: space-around;
 }
@@ -211,7 +216,6 @@ margin-top: 2.5%;
 .newPetFormDiv{
   width: 50%;
   margin: 0 auto;
-  border: solid;
   padding: 20px;
   margin-top: 20px;
 }
@@ -219,15 +223,12 @@ margin-top: 2.5%;
 .updateVetFormDiv{
   width: 50%;
   margin: 0 auto;
-  border: solid;
   padding: 20px;
   margin-top: 20px;
 }
 
 .newVetFormDiv{
-  padding: 20px;
   width: 60%;
-  margin: 0 auto;
 }
 
 .petVetUpdateButton{
