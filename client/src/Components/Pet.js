@@ -72,7 +72,7 @@ class Pet extends Component {
               <h5> {vet.cityStateZip}</h5>
               <a href={vet.website} target="_blank">{vet.website}</a>
             </div>
-            <button className="petVetDeleteButton" onClick={(e) => { if (window.confirm("Are you sure you would like to delete this vet? This CAN'T be undone!")) this.deleteVet(e) }}>Delete Vet</button>
+            <button className="petVetDeleteButton" onClick={(e) => { if (window.confirm("Please DO NOT delete this vet without creating a new vet and review first! Thanks!")) this.deleteVet(e) }}>Delete Vet</button>
             <button className="petVetUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
           </div>
         </div>
