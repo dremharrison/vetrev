@@ -4,36 +4,92 @@ body {
   font-family: sans-serif;
 }
 
+.vetHeader {
+  width: 100vw;
+  height: 20vh;
+  border: solid orange;
+  display: flex;
+  justify-content: space-around;
+}
+
+.vetHeaderImgOne {
+  width: 12vw;
+  height: 31vh;
+  z-index: 1;
+}
+
+.vetHeaderImgTwo {
+  width: 11vw;
+  height: 23.3vh;
+  z-index: 1;
+}
+
 .headerDiv{
   position: relative; 
-  margin-top: -22px;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)), url("/images/vetrevheader.jpg") no-repeat center center fixed;
-  
+  height: 40vh;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)), url("/images/vetrevheader.jpg") no-repeat bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.headerDivInfo {
+  width: 40vw;
+}
+
+.petHeaderDivInfo {
+  text-align: center;
+  width: 50vw;
+}
+
+.newVetHeader {
+  width: 100vw;
+  height: 20vh;
+  border: solid orange;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.newVetHeaderImgOne {
+  width: 14vw;
+  height: 23.5vh;
+  -ms-transform: rotate(-2deg); /* IE 9 */
+  -webkit-transform: rotate(-2deg); /* Safari 3-8 */
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.newVetHeaderImgTwo {
+  width: 14vw;
+  height: 19.3vh;
+  z-index: 1;
 }
 
 .newVetHeaderDiv{
   position: relative; 
-  margin-top: -22px;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)), url("/images/newvetheader.jpg") no-repeat center center fixed;
-  
+  height: 60vh;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6)), url("/images/newvetheader.jpg") no-repeat bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.petHeader {
+  width: 100vw;
+  height: 20vh;
+  border: solid orange;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.petHeaderImgOne {
+  width: 20vw;
+  height: 30vh;
+  z-index: 1;
 }
 
 h1{
@@ -44,7 +100,7 @@ h1{
 
 h3{
   text-align: center;
-  color: white;
+  color: orange;
   font-size: 30px;
 }
 
@@ -151,23 +207,6 @@ margin-left: 1.3%;
 margin-top: 2.5%;
 }
 
-.backToVetsButton:hover{
-  background:white;
-  color:black;
-}
-
-.newReviewButton{
-  font-size: 14px;
-  border-radius: 28px;
-  text-decoration: none;
-  margin-left: 25%; 
-  outline: none;
-}
-
-.newReviewButton:hover{
-  background:orange;
-  color: white;
-}
 
 .newPetFormDiv{
   width: 50%;
@@ -191,43 +230,33 @@ margin-top: 2.5%;
   margin: 0 auto;
 }
 
-
-
-.petUpdateButton{
+.petVetUpdateButton{
+  width: 8vw;
   border-radius: 28px;
   font-size: 14px;
   margin-left: 1%;
   outline: none;
 }
 
-.petUpdateButton:hover{
+.petVetUpdateButton:hover{
   background:orange;
   color:white;
 }
 
-.petDeleteButton{
+.petVetDeleteButton{
+  width: 8vw;
   border-radius: 28px;
   font-size: 14px;
   margin-left: 31%;
   outline: none; 
 }
 
-.petReviewDeleteButton{
-  border-radius: 28px;
-  font-size: 14px;
-  outline: none;
-  margin-top: 5%;
-}
 
-.petDeleteButton:hover{
+.petVetDeleteButton:hover{
   background:red;
   color: white;
 }
 
-.petReviewDeleteButton:hover{
-  background:red;
-  color: white;
-}
 
 .petLogo{
   width: 225px;
@@ -253,6 +282,5 @@ margin-top: 2.5%;
 }
 
 .petDivInfo{
-  text-align: center;
   width: 40%;
 }

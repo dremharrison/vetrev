@@ -58,47 +58,55 @@ class Pet extends Component {
 
   render() {
     const vet = this.state.vet || {}
-    const petReversed  = this.state.pet.reverse()
+    const petReversed = this.state.pet.reverse()
     return (
       <div>
+        <div className="petHeader">
+          <img className="petHeaderImgOne" src={vet.logourl} />
 
-        <h1>Pet Review</h1>
-        <Link to="/"><button className="backToVetsButton">Back to Vets</button></Link>
-        <div className="vetParentDiv">
-          <div className="vetDiv">
-            <div className="vetDivLogo"><h2>{vet.name}</h2><img className="vetLogo" alt="vetLogo" src={vet.logourl} /></div>
-            <div className="vetDivInfo">
-              <h5> {vet.streetAddress}</h5>
-              <h5> {vet.cityStateZip}</h5>
-              <h5> {vet.phoneNumber}</h5>
-              <h5>Hours of Operation: {`${vet.hoursOfOperationOpen} - ${vet.hoursOfOperationClose}`}</h5>
-              <a href={vet.website} target="_blank">{vet.website}</a>
+          <div className="d-flex justify-content-center align-items-end mb-2">
+
+            <div className="petHeaderDivInfo">
+              <h1>{vet.name}This</h1>
+              <h5> {vet.streetAddress}Street</h5>
+              <h5> {vet.cityStateZip}Zip</h5>
+              <a href={vet.website} target="_blank">{vet.website}http</a>
             </div>
-            <div>
-            </div>
+            <button className="petVetDeleteButton" onClick={(e) => { if (window.confirm("Are you sure you would like to delete this vet? This CAN'T be undone!")) this.deleteVet(e) }}>Delete Vet</button>
+            <button className="petVetUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
           </div>
         </div>
 
-        <button className="newReviewButton" onClick={this.toggleNewPetFormButton} >New Review</button>
-        <button className="petDeleteButton" onClick={(e) => {if (window.confirm("Are you sure you would like to delete this vet? This CAN'T be undone!")) this.deleteVet(e)}}>Delete Vet</button>
-        <button className="petUpdateButton" onClick={this.toggleUpdateVetFormButton}>Update Vet</button>
+        <nav class="navbar navbar-expand-lg navbar-dark mb-5" style={{ backgroundColor: "gray" }}>
+          <div class="d-flex justify-content-center navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/vet/new">New Vet</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" style={{ color: "orange", cursor: "pointer" }} onClick={this.toggleNewPetFormButton}>New Review</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        {this.state.newPetForm ?
+          <NewPetForm
+            toggleNewPetFormButton={this.toggleNewPetFormButton.bind(this)}
+            getPet={this.getPet.bind(this)}
+            props={this.props} />
+          : null}
 
 
-        {this.state.newPetForm ? 
-        <NewPetForm 
-        toggleNewPetFormButton={this.toggleNewPetFormButton.bind(this)} 
-        getPet={this.getPet.bind(this)}
-        props={this.props} /> 
-        : null}
+        {this.state.editVet ?
+          <UpdateVetForm
+            toggleUpdateVetFormButton={this.toggleUpdateVetFormButton.bind(this)}
+            props={this.props} />
+          : null}
 
-
-        {this.state.editVet ? 
-        <UpdateVetForm 
-        toggleUpdateVetFormButton={this.toggleUpdateVetFormButton.bind(this)} 
-        props={this.props}/> 
-        : null}
-
-        {console.log(petReversed)}
 
         {this.state.pet.slice(0).map((pet, index) => {
 
@@ -107,20 +115,19 @@ class Pet extends Component {
               <div className="petDiv" >
                 <div className="petDivLogo" >
                   <h5>{pet.name}</h5>
-                  <img className="petLogo" alt="pet" src={pet.picurl}></img>        
-                
+                  <img className="petLogo" alt="pet" src={pet.picurl}></img>
+
                 </div>
-                
+
                 <div className="petDivInfo">
                   <h6>Age: {pet.age}</h6>
                   <h6>Breed: {pet.breed}</h6>
                   <h6>Gender: {pet.gender}</h6>
                   <h6>Review: {pet.review}</h6>
-          {/* {console.log(pet._id)} */}
                 </div>
-                
-              </div> 
-              
+
+              </div>
+
             </div>
           )
         })

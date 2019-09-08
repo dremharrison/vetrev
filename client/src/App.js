@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios';
 import Vet from './Components/Vet';
 import Pet from './Components/Pet';
-import NewVetForm from './Components/NewVetForm';
+import NewVet from './Components/NewVet';
 import NewPetForm from './Components/NewPetForm';
 import Comment from './Components/Comment';
 
@@ -46,7 +46,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={VetComponent} />
             <Route path="/:vetid/pet" component={PetComponent} />
-            <Route path="/vet/new" component={NewVetForm} />
+            <Route path="/vet/new" component={NewVet} />
             <Route exact path="/:vetid/pet/new" component={NewPetForm} />
             <Route path="/:vetid/pet/:petid/comment" component={Comment} />
           </Switch>

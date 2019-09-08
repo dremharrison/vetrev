@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import HomeNav from './VetNav';
+import VetHeader from './VetHeader';
 
 class Vet extends Component {
     state = {
@@ -21,19 +23,14 @@ class Vet extends Component {
     render() {
         return (
             <div className="mainDiv">
+                <VetHeader/>
+                
+                <HomeNav/>
+
                 <div className="headerDiv">
-                    <div className="headerDivInfo">
-
-                        <h1>VetRev</h1>
-                        <h3>Reviews from your local Veterinarian straight from the horses mouth</h3>
-                    </div>
-
+                
                 </div>
-                <Link to="/vet/new">
-                    <button className="link">Add New Veterinarian</button>
-                </Link>
-
-
+                
                 {
                     this.state.vet.map((vet, index) => {
                         return (
