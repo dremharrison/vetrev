@@ -15,7 +15,7 @@ class Vet extends Component {
                 <HomeNav/>
 
                 <div className="headerDiv">
-                
+                <h3 style={{color: "white", fontStyle: "bold"}}>Reviews straight from the horse's mouth!</h3>
                 </div>
                 
                 <VetBody/>

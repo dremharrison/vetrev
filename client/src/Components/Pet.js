@@ -80,14 +80,14 @@ class Pet extends Component {
         <nav class="navbar navbar-expand-lg navbar-dark mb-5" style={{ backgroundImage: `url(${"/images/wood.jpeg"})` }}>
           <div class="d-flex justify-content-center navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="/vet/new">New Vet</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" style={{ color: "orange", cursor: "pointer" }} onClick={this.toggleNewPetFormButton}>New Review</a>
+                <a class="nav-link" style={{ color: "#d1bc8e", cursor: "pointer" }} onClick={this.toggleNewPetFormButton}>New Review</a>
               </li>
             </ul>
           </div>

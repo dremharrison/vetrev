@@ -6,13 +6,8 @@ class NewVetHeader extends Component {
             <div className="newVetHeader">
                 <img className="newVetHeaderImgOne" src="/images/dog_navbar_three.png" />
 
-                <div className="d-flex justify-content-center align-items-center">
+                <img className="newVetHeaderLogo" src="/images/vetrev_logo.png" />
 
-                    <div className="headerDivInfo">
-                        <h1>New Vet</h1>
-                        <h3>Add a new vet, then add a review!</h3>
-                    </div>
-                </div>
                 <img className="newVetHeaderImgTwo" src="/images/cat_navbar_two.png" />
             </div>
         );

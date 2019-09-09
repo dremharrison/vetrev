@@ -53,6 +53,7 @@ class NewVetForm extends Component {
         <NewVetHeader />
         <NewVetNav />
         <div className="newVetHeaderDiv">
+        <h3 className="mb-3" style={{color: "white", fontStyle: "bold"}}>Add a new vet, then add a review!</h3>
         </div>
 
         <div className="d-flex justify-content-center mb-3 mt-5">
