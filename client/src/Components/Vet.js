@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import HomeNav from './VetNav';
+import Navbar from './Navbar';
 import VetHeader from './VetHeader';
 import VetBody from './VetBody';
+import Footer from './Footer';
 
 class Vet extends Component {
 
@@ -12,13 +13,14 @@ class Vet extends Component {
             <div className="mainDiv">
                 <VetHeader/>
                 
-                <HomeNav/>
+                <Navbar/>
 
                 <div className="headerDiv">
                 <h3 style={{color: "white", fontStyle: "bold"}}>Reviews straight from the horse's mouth!</h3>
                 </div>
                 
                 <VetBody/>
+                <Footer/>
             </div >
         );
     }

@@ -1,8 +1,28 @@
+/* General */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+h1{
+  text-align: center;
+  color: #d1bc8e;
+  font-size: 60px;
+}
+
+h3{
+  text-align: center;
+  color: #d1bc8e;
+  font-size: 30px;
+}
+
+h4{
+  text-align: center;
+  color: #d1bc8e;
+}
+
+/* Vet______________________________________________________________ */
 
 .vetHeader {
   width: 100vw;
@@ -19,7 +39,7 @@ body {
 }
 
 .vetHeaderImgTwo {
-  width: 11vw;
+  width: 13vw;
   height: 24vh;
   z-index: 1;
 }
@@ -42,10 +62,42 @@ body {
   width: 40vw;
 }
 
-.petHeaderDivInfo {
-  text-align: center;
-  width: 43vw;
+.linkToReview:hover{
+  text-decoration: none;
 }
+
+.vetLogo{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.vetParentDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.vetDiv{
+  border-width: 2px;
+  width: 60%;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 5px gray;
+}
+
+.vetDivLogo{
+  text-align: center;
+  width: 40%;
+}
+
+
+.vetDivInfo{
+  text-align: center;
+  width: 40%;
+}
+ 
+/*New Vet __________________________________________________________________ */
 
 .newVetHeader {
   width: 100vw;
@@ -91,6 +143,12 @@ body {
   align-items: center;
 }
 
+.newVetFormDiv{
+  width: 60%;
+}
+
+/* Pet___________________________________________________________________________ */
+
 .petHeader {
   width: 100vw;
   height: 20vh;
@@ -99,102 +157,45 @@ body {
 }
 
 .petHeaderImgOne {
-  width: 18vw;
-  height: 30vh;
+  width: 15vw;
+  height: 23vh;
   z-index: 1;
 }
 
-h1{
-  text-align: center;
-  color: #d1bc8e;
-  font-size: 60px;
+.petHeaderImgTwo {
+  width: 16vw;
+  height: 20vh;
+  z-index: 1;
 }
 
-h3{
-  text-align: center;
-  color: #d1bc8e;
-  font-size: 30px;
+.petReviewLogo{
+  height: 15vh;
+  
 }
 
-h4{
-  text-align: center;
-  color: #d1bc8e;
-}
-
-.linkToReview:hover{
-  text-decoration: none;
-}
-
-.vetLogo{
-  width: 300px;
-  margin-bottom: 20px;
-}
-
-.vetParentDiv{
+.petReviewParentDiv{
   display: flex;
   justify-content: center;
 }
 
-.vetDiv{
+.petReviewDiv{
   border-width: 2px;
-  width: 60%;
+  width: 50%;
   margin: 30px;
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0 0 5px gray;
-}
-
-.vetDivLogo{
-  text-align: center;
-  width: 40%;
-}
-
-
-.vetDivInfo{
-  text-align: center;
-  width: 40%;
-}
-
-
-.vetFormChildDiv{
-  display: flex;
-  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  box-shadow: 0 0 2px gray;
 }
 
-.newVetFormImg{
-  width: 20%;
-  
+.petReviewDivLogo{
+  text-align: center;
 }
 
-.newVetFormInfo{
-  font-size: 16px;
+.petReviewDivInfo{
   width: 40%;
 }
-
-.newVetForm{
-  width: 30%;
-  font-size: 20px;
-  padding: 20px;
-  line-height: 150%;
-  display: inline-block;
-}
-
-
-.newVetSubmit{
-  text-decoration: none;
-  outline: none;
-  color: black;
-  font-size: 14px;
-}
-
-.newVetSubmit:hover{
-  color: #d1bc8e;
-}
-
 
 .newPetFormDiv{
   width: 50%;
@@ -210,63 +211,16 @@ h4{
   margin-top: 20px;
 }
 
-.newVetFormDiv{
-  width: 60%;
-}
-
-.petVetUpdateButton{
-  width: 8vw;
-  border-radius: 28px;
-  font-size: 14px;
-  margin-left: 1%;
-  outline: none;
-}
-
-.petVetUpdateButton:hover{
+.newReviewBtn .btn .btn-sm .btn-outline-secondary{
   background: #d1bc8e;
-  color:white;
-}
-
-.petVetDeleteButton{
-  width: 8vw;
-  border-radius: 28px;
-  font-size: 14px;
-  margin-left: 31%;
-  outline: none; 
-}
-
-
-.petVetDeleteButton:hover{
-  background:red;
   color: white;
 }
 
+.deleteBtn:hover{
+  background: red;
+  color: white;
 
-.petLogo{
-  height: 15vh;
-  
 }
 
-.petParentDiv{
-  display: flex;
-  justify-content: center;
-}
 
-.petDiv{
-  border-width: 2px;
-  width: 50%;
-  margin: 30px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 0 2px gray;
-}
-
-.petDivLogo{
-  text-align: center;
-}
-
-.petDivInfo{
-  width: 40%;
-}
+/* end___________________________________________________________ */
