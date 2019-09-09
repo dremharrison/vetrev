@@ -17,4 +17,4 @@ Project Planning & User Stories - Trello<br />
 Visual Studio Code<br />
 
 ## Future Version
-Star ratings will be included with the review.
+Add login for vet admin and pets(users)
