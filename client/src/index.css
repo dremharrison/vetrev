@@ -260,7 +260,8 @@ margin-top: 2.5%;
 
 
 .petLogo{
-  width: 225px;
+  height: 15vh;
+  
 }
 
 .petParentDiv{
@@ -275,6 +276,7 @@ margin-top: 2.5%;
   padding: 20px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   box-shadow: 0 0 2px gray;
 }
 

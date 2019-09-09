@@ -4,7 +4,7 @@ class HomeNav extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "gray"}}>
+                <nav class="navbar navbar-expand-lg navbar-dark" style={{backgroundImage: `url(${"/images/wood.jpeg"})`}}>
                     <div class="d-flex justify-content-center navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item active">

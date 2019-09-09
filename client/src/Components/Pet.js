@@ -77,7 +77,7 @@ class Pet extends Component {
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark mb-5" style={{ backgroundColor: "gray" }}>
+        <nav class="navbar navbar-expand-lg navbar-dark mb-5" style={{ backgroundImage: `url(${"/images/wood.jpeg"})` }}>
           <div class="d-flex justify-content-center navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -109,6 +109,20 @@ class Pet extends Component {
 
 
         {this.state.pet.slice(0).map((pet, index) => {
+            let petRating;
+          if (pet.rating === "1") {
+            petRating = <h6>Rating: &#9733;&#9734;&#9734;&#9734;&#9734; ({pet.rating})</h6>
+          } else if (pet.rating === "2") {
+            petRating = <h6>Rating: &#9733;&#9733;&#9734;&#9734;&#9734; ({pet.rating})</h6>
+          } else if (pet.rating === "3") {
+            petRating = <h6>Rating: &#9733;&#9733;&#9733;&#9734;&#9734; ({pet.rating})</h6>
+          } else if (pet.rating === "4") {
+            petRating = <h6>Rating: &#9733;&#9733;&#9733;&#9733;&#9734; ({pet.rating})</h6>
+          } else if (pet.rating === "5") {
+            petRating = <h6>Rating: &#9733;&#9733;&#9733;&#9733;&#9733; ({pet.rating})</h6>
+          } else {
+            petRating = <h6>Rating: "N/A"</h6>
+          }
 
           return (
             <div className="petParentDiv" key={index}>
@@ -120,6 +134,7 @@ class Pet extends Component {
                 </div>
 
                 <div className="petDivInfo">
+                  {petRating}
                   <h6>Age: {pet.age}</h6>
                   <h6>Breed: {pet.breed}</h6>
                   <h6>Gender: {pet.gender}</h6>

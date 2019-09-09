@@ -6,8 +6,8 @@ const vetSchema = new Schema({
   streetAddress: String,
   cityStateZip: String,
   phoneNumber: String,
-  hoursOfOperationOpen: Number,
-  hoursOfOperationClose: Number,
+  hoursOfOperationOpen: String,
+  hoursOfOperationClose: String,
   logourl: String,
   website: String,
   pets:[petSchema]
