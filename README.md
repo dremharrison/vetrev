@@ -10,12 +10,6 @@ https://vetrev.herokuapp.com/
 ## Trello
 https://trello.com/b/S0eBxY73/vet-rev
 
-## Wireframe
-![pic](/public/images/wireframe.jpeg)
-
-## ERD
-![pic](/public/images/erd.jpeg)
-
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript<br />
 Frameworks & Libraries - React, Express, MongoDB, Mongoose, Node, Axios, BootStrap, Reactstrap<br />
