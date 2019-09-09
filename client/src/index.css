@@ -62,10 +62,6 @@ h4{
   width: 40vw;
 }
 
-.linkToReview:hover{
-  text-decoration: none;
-}
-
 .vetLogo{
   width: 300px;
   margin-bottom: 20px;
@@ -210,17 +206,5 @@ h4{
   padding: 20px;
   margin-top: 20px;
 }
-
-.newReviewBtn .btn .btn-sm .btn-outline-secondary{
-  background: #d1bc8e;
-  color: white;
-}
-
-.deleteBtn:hover{
-  background: red;
-  color: white;
-
-}
-
 
 /* end___________________________________________________________ */

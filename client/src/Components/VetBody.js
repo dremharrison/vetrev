@@ -27,7 +27,7 @@ class VetBody extends Component {
                                         Subscribe
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">DEALS!!!</h5>
+                                        <h5 class="card-title">Stay in Touch</h5>
                                         <p class="card-text">Subscribe to our newsletter so we can spam you with special events and deals!</p>
                                         <input class="form-control mb-2 mr-sm-2" type="search" placeholder="email" aria-label="Search" />
                                         <a href="#" class="btn btn-secondary">Subscribe</a>
@@ -79,7 +79,7 @@ class VetBody extends Component {
                                             <div className="vetDiv d-flex align-items-center" >
                                                 <div className="vetDivLogo">
                                                     <img className="vetLogo" alt="vetLogo" src={vet.logourl} />
-                                                    <Link className="linkToReview" to={`${vet._id}/pet`}><h4>{vet.name}'s Review</h4></Link>
+                                                    <button type="button" class="btn btn-secondary"><a className="linkToReview" style={{color:"white", textDecoration: "none"}} href={`${vet._id}/pet`}>{vet.name}'s Review</a></button>
                                                 </div>
                                                 <div className="vetDivInfo align-items-center justify-content-center">
                                                     <h5> {vet.streetAddress}</h5>

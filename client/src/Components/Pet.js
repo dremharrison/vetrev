@@ -109,9 +109,9 @@ class Pet extends Component {
                 <h1 class="h2">{vet.name}</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                   <div class="btn-group mr-2">
-                    <button style={{background: "#d1bc8e", color: "white"}}class="newReviewBtn btn btn-sm btn-outline-secondary" onClick={this.toggleNewPetFormButton}>New Review</button>
+                    <button style={{background: "#d1bc8e", color: "white"}}class="btn btn-sm btn-outline-secondary" onClick={this.toggleNewPetFormButton}>Add Review</button>
                     <button class="btn btn-sm btn-outline-secondary" onClick={this.toggleUpdateVetFormButton}>Update</button>
-                    <button class="deleteBtn btn btn-sm btn-outline-secondary" onClick={(e) => { if (window.confirm("Please DO NOT delete this vet without creating a new vet and review first! Thanks!")) this.deleteVet(e) }}>Delete</button>
+                    <button class="btn btn-sm btn-outline-secondary" onClick={(e) => { if (window.confirm("Please DO NOT delete this vet without creating a new vet and review first! Thanks!")) this.deleteVet(e) }}>Delete</button>
                   </div>
                 </div>
               </div>
